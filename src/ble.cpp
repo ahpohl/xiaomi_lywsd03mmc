@@ -1,6 +1,5 @@
 #include <iostream>
 #include <fstream>
-#include <vector>
 #include "ble.hpp"
 
 using namespace std;
@@ -39,6 +38,18 @@ void Ble::readPacketFile(char* t_file)
     std::cout << "Reading " << length << " characters... " << endl;
   }
   istreambuf_iterator<char> eos;
-  vector<uint8_t> m_packet(std::istreambuf_iterator<char>(ifs), eos);
+  string m_packet(std::istreambuf_iterator<char>(ifs), eos);
   ifs.close();
+}
+
+void Ble::parsePacket(void) const
+{
+  size_t pos = 0;
+  string xiaomi_mitemp = "\x16\x95\xFE";
+  //TODO: m_packet is an empty string
+  pos = m_packet.find(xiaomi_mitemp);
+  if (pos == string::npos) {
+    throw runtime_error("Xiaomi service data not found");
+  }
+  cout << pos << endl;
 }

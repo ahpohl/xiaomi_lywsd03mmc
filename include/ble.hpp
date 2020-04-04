@@ -10,10 +10,11 @@ public:
   ~Ble(void);
   void setDebug(void);
   void readPacketFile(char* t_file);
+  void parsePacket(void) const;
   
 private:
   bool m_debug;
-  std::vector<uint8_t> m_packet;
+  std::string m_packet;
   
 };
 

@@ -56,6 +56,7 @@ int main(int argc, char* argv[])
     myBle.setDebug();
   }
   myBle.readPacketFile(packet_file);
+  myBle.parsePacket();
 
   return 0;
 }
