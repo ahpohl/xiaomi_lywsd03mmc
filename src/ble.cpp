@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <vector>
 #include "ble.hpp"
 
 using namespace std;
@@ -7,13 +8,10 @@ using namespace std;
 Ble::Ble(void)
 {
   m_debug = false;
-  m_packet = nullptr;
 }
 
 Ble::~Ble(void)
 {
-  delete[] m_packet;
-
   if (m_debug) {
     cout << "Ble destructor method called" << endl;
   }
@@ -34,13 +32,13 @@ void Ble::readPacketFile(char* t_file)
   catch (ifstream::failure const& e) {
     cerr << "Exception opening file: " << e.what() << endl;
   }
-  ifs.seekg (0, ifs.end);
-  int length = ifs.tellg();
-  ifs.seekg (0, ifs.beg);
-  m_packet = new char [length];
   if (m_debug) {
+    ifs.seekg (0, ifs.end);
+    int length = ifs.tellg();
+    ifs.seekg (0, ifs.beg);
     std::cout << "Reading " << length << " characters... " << endl;
   }
-  ifs.read (m_packet, length);
+  istreambuf_iterator<char> eos;
+  vector<uint8_t> m_packet(std::istreambuf_iterator<char>(ifs), eos);
   ifs.close();
 }

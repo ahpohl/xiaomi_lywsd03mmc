@@ -1,6 +1,8 @@
 #ifndef BLE_HPP
 #define BLE_HPP
 
+#include <vector>
+
 class Ble
 {
 public:
@@ -11,7 +13,7 @@ public:
   
 private:
   bool m_debug;
-  char* m_packet;
+  std::vector<uint8_t> m_packet;
   
 };
 
