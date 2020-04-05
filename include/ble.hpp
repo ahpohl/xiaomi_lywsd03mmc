@@ -10,11 +10,15 @@ public:
   ~Ble(void);
   void setDebug(void);
   void readPacketFile(char* t_file);
-  std::string parsePacket(void) const;
+  void parsePacket(void);
+  int getTemperature(void) const;
+  int getHumidity(void) const;
+  int getBatteryLevel(void) const;
   
 private:
   bool m_debug;
   std::string m_packet;
+  std::string m_plaintext;
   static const std::map<std::string, std::string> XIAOMI_TYPE;
   static const std::map<std::string, std::string> XIAOMI_KEYS;
   std::string decryptPayload(std::string const& t_cipher,
