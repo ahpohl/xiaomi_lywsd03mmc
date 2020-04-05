@@ -3,7 +3,13 @@
 #include <iomanip>
 #include <algorithm>
 #include <map>
+
+#include <cryptopp/cryptlib.h>
+#include <cryptopp/filters.h>
+#include <cryptopp/aes.h>
+#include <cryptopp/ccm.h>
 #include <cryptopp/hex.h>
+
 #include "ble.hpp"
 
 using namespace std;
@@ -153,16 +159,17 @@ void Ble::parsePacket(void) const
   string key;
   CryptoPP::StringSource ssk(enc_key, true, new CryptoPP::HexDecoder(
     new CryptoPP::StringSink(key)));
-  string packet_id = m_packet[pos+7];
-  string iv = mac_source + m_packet.substr(pos+5, 2) + m_packet[pos+7];
+  string iv = mac_source + m_packet.substr(pos+5, 2) + m_packet.substr(pos+7, 1);
   string plaintext = decryptPayload(cipher, key, iv);
 }
 
-string Ble::decryptPaylod(string const& cipher, string const& key, 
+string Ble::decryptPayload(string const& cipher, string const& key, 
   string const& iv) const
 {
   string plaintext;
+  string aad("\x11");
 
+  
 
   return plaintext;
 }
