@@ -9,6 +9,7 @@
 #include <cryptopp/aes.h>
 #include <cryptopp/ccm.h>
 #include <cryptopp/hex.h>
+#include <assert.h>
 
 #include "ble.hpp"
 
@@ -163,13 +164,73 @@ void Ble::parsePacket(void) const
   string plaintext = decryptPayload(cipher, key, iv);
 }
 
-string Ble::decryptPayload(string const& cipher, string const& key, 
-  string const& iv) const
+string Ble::decryptPayload(string const& t_cipher, string const& t_key, 
+  string const& t_iv) const
 {
   string plaintext;
-  string aad("\x11");
+  int const TAG_SIZE = 4;
+  string aad = "\x11";
 
-  
+  // Break the cipher text out into it's
+  //  components: Encrypted and MAC
+  string enc = t_cipher.substr(0, t_cipher.length()-TAG_SIZE);
+  string tag = t_cipher.substr(t_cipher.length()-TAG_SIZE);
+
+  try {
+    CryptoPP::CCM< CryptoPP::AES, TAG_SIZE >::Decryption d;
+    d.SetKeyWithIV((const CryptoPP::byte*)t_key.data(), t_key.size(), 
+      (const CryptoPP::byte*)t_iv.data(), t_iv.size());
+    d.SpecifyDataLengths(aad.size(), enc.size(), 0);
+
+    CryptoPP::AuthenticatedDecryptionFilter df(d, nullptr,
+      CryptoPP::AuthenticatedDecryptionFilter::MAC_AT_BEGIN | 
+      CryptoPP::AuthenticatedDecryptionFilter::THROW_EXCEPTION
+    );
+
+    // The order of the following calls are important
+    df.ChannelPut(CryptoPP::DEFAULT_CHANNEL,
+      (const CryptoPP::byte*)tag.data(), tag.size());
+    df.ChannelPut(CryptoPP::AAD_CHANNEL,
+      (const CryptoPP::byte*)aad.data(), aad.size());
+    df.ChannelPut(CryptoPP::DEFAULT_CHANNEL,
+      (const CryptoPP::byte*)enc.data(), enc.size());
+
+    df.ChannelMessageEnd(CryptoPP::AAD_CHANNEL);
+    df.ChannelMessageEnd(CryptoPP::DEFAULT_CHANNEL);
+
+    // If the object does not throw, here's the only
+    // opportunity to check the data's integrity
+    bool b = false;
+    b = df.GetLastResult();
+    assert(true == b);
+
+    // Remove data from channel
+    size_t n = (size_t)-1;
+
+    // Plain text recovered from enc.data()
+    df.SetRetrievalChannel(CryptoPP::DEFAULT_CHANNEL);
+    n = (size_t)df.MaxRetrievable();
+    plaintext.resize(n);
+
+    if (n > 0) {
+      df.Get((CryptoPP::byte*)plaintext.data(), n);
+    }
+
+    // All is well - work with data
+    if (m_debug) {
+      cout << "Decrypted and Verified data. Ready for use." << endl;
+    }
+  }
+  catch (CryptoPP::InvalidArgument& e)
+  {
+    cerr << "Caught InvalidArgument..." << endl;
+    cerr << e.what() << endl;
+  }
+  catch (CryptoPP::HashVerificationFilter::HashVerificationFailed& e)
+  {
+    cerr << "Caught HashVerificationFailed..." << endl;
+    cerr << e.what() << endl;
+  }
 
   return plaintext;
 }

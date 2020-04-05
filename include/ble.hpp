@@ -11,8 +11,8 @@ public:
   void setDebug(void);
   void readPacketFile(char* t_file);
   void parsePacket(void) const;
-  std::string decryptPayload(std::string const& cipher, std::string const& key,
-    std::string const& iv) const;
+  std::string decryptPayload(std::string const& t_cipher, 
+    std::string const& t_key, std::string const& t_iv) const;
   
 private:
   bool m_debug;
