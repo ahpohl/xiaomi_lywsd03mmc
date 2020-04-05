@@ -75,37 +75,44 @@ void Ble::readPacketFile(char* t_file)
   ifs.close();
 }
 
-void Ble::parsePacket(void) const
+string Ble::parsePacket(void) const
 {
+  string plaintext;
+  plaintext.clear();
+
   // check for Xiaomi service data
   size_t pos = 0;
   pos = m_packet.find("\x16\x95\xFE", 15);
   if (pos == string::npos) {
-    throw runtime_error("Xiaomi service data not found");
+    cout << "Xiaomi service data not found" << endl;
+    return plaintext;
   }
   // check for no BR/EDR + LE General discoverable mode flags
   size_t adv = 0;
   adv = m_packet.find("\x02\x01\x06", 14);
   if (adv == string::npos) {
-    throw runtime_error("BR/EDR + LE general discoverable mode flags detected");
+    cout << "BR/EDR + LE general discoverable mode flags detected" << endl;
+    return plaintext;
   }
   // check for BTLE packet size
   size_t packet_size = 0;
   packet_size = m_packet[2] + 3;
   if (packet_size != m_packet.length()) {
-    throw runtime_error(string("Wrong BLE packet length (") + 
-      to_string(m_packet.length()) + ")");
+    cout << "Wrong BLE packet length (" << to_string(m_packet.length()) 
+      << ")" << endl;
+    return plaintext;
   }
   // check for MAC presence in message and in service data
   string mac_xiaomi(m_packet.substr(pos+8, 6));
   string mac_source(m_packet.substr(adv-7, 6));
   if (mac_xiaomi != mac_source) {
-    throw runtime_error("MAC address mismatch");
+    cout << "MAC address mismatch" << endl;
+    return plaintext;
   }
   // check if RSSI is valid
   int8_t rssi = m_packet.back();
   if (rssi > 0 || rssi < -127) {
-    throw runtime_error("Invalid RSSI signal strength");
+    cout << "Invalid RSSI signal strength" << endl;
   }
   // check sensor type, report unknown
   string sensor_type;
@@ -120,28 +127,32 @@ void Ble::parsePacket(void) const
     );
     cout << "BLE ADV from UNKNOWN: RSSI: " << to_string(rssi) 
       << " dBm, MAC: " << encoded << endl;
-    throw runtime_error(e.what());
+    return plaintext;
   }
   // check frame control flags, big endian format
   uint16_t framectrl = (m_packet[pos+3] << 8) | (m_packet[pos+4] & 0xFF);
   if (!(framectrl & 0x4000)) {
-    throw runtime_error("No ADV payload present");
+    cout << "No ADV payload present" << endl;
+    return plaintext;
   }
   size_t payload_length;
   payload_length = (framectrl & 0x2000) ? m_packet.length()-pos-16 : 
     m_packet.length()-pos-15;
   if (payload_length < 3) {
-    throw runtime_error("Invalid ADV payload length");
+    cout << "Invalid ADV payload length" << endl;
+    return plaintext;
   }
   size_t payload_pos;
   payload_pos = (framectrl & 0x2000) ? pos+15 : pos+14;
   if (payload_length != (m_packet.substr(payload_pos+1, string::npos).length()))  {
-    throw runtime_error("Invalid ADV payload start");
+    cout << "Invalid ADV payload start" << endl;
+    return plaintext;
   }
   string cipher = m_packet.substr(payload_pos, payload_length);
   // check encrypted data flags
   if (!(framectrl & 0x0800)) {
-    throw runtime_error("Plaintext ADV payload");
+    cout << "Plaintext ADV payload" << endl;
+    return m_packet.substr(payload_pos, 5); 
   }
   // lookup encryption key
   string enc_mac;
@@ -155,13 +166,16 @@ void Ble::parsePacket(void) const
   }
   catch (exception const& e) {
     cout << "MAC address " << enc_mac << ": encryption key unknown" << endl;
-    throw runtime_error(e.what());
+    return plaintext;
   }
   string key;
   CryptoPP::StringSource ssk(enc_key, true, new CryptoPP::HexDecoder(
     new CryptoPP::StringSink(key)));
-  string iv = mac_source + m_packet.substr(pos+5, 2) + m_packet.substr(pos+7, 1);
-  string plaintext = decryptPayload(cipher, key, iv);
+  string iv = mac_source + m_packet.substr(pos+5, 2) 
+    + m_packet.substr(pos+7, 1);
+  plaintext = decryptPayload(cipher, key, iv);
+  
+  return plaintext;
 }
 
 string Ble::decryptPayload(string const& t_cipher, string const& t_key, 

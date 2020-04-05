@@ -10,15 +10,15 @@ public:
   ~Ble(void);
   void setDebug(void);
   void readPacketFile(char* t_file);
-  void parsePacket(void) const;
-  std::string decryptPayload(std::string const& t_cipher, 
-    std::string const& t_key, std::string const& t_iv) const;
+  std::string parsePacket(void) const;
   
 private:
   bool m_debug;
   std::string m_packet;
   static const std::map<std::string, std::string> XIAOMI_TYPE;
   static const std::map<std::string, std::string> XIAOMI_KEYS;
+  std::string decryptPayload(std::string const& t_cipher,
+    std::string const& t_key, std::string const& t_iv) const;
 };
 
 #endif // BLE_HPP
