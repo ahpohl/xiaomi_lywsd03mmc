@@ -16,7 +16,6 @@ private:
   bool m_debug;
   std::string m_packet;
   static const std::map<std::string, std::string> XIAOMI_TYPE;
-  std::string toHex(std::string const& s) const;
 };
 
 #endif // BLE_HPP

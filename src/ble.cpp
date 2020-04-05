@@ -15,7 +15,7 @@ const map<string, string> Ble::XIAOMI_TYPE = {
   {"\x47\x03", "CGG1"},
   {"\x5D\x01", "HHCCPOT002"},
   {"\xBC\x03", "GCLS002"},
-  {"\x5B\x06", "LYWSD03MMC"},
+  {"\x5B\x05", "LYWSD03MMC"},
   {"\x76\x05", "CGD1"}  
 };
 
@@ -34,18 +34,6 @@ Ble::~Ble(void)
 void Ble::setDebug(void)
 {
   m_debug = true;
-}
-
-string Ble::toHex(string const& s) const
-{
-  char const hex_digits[] = "0123456789ABCDEF";
-  string res;
-  res.reserve(s.length() * 2);
-  for (unsigned char c : s) {
-    res.push_back(hex_digits[c >> 4]);
-    res.push_back(hex_digits[c & 15]);
-  }
-  return res;
 }
 
 void Ble::readPacketFile(char* t_file)
@@ -109,12 +97,11 @@ void Ble::parsePacket(void) const
   catch (exception const& e) {
     string encoded;
     reverse(mac_xiaomi.begin(), mac_xiaomi.end());
-    CryptoPP::StringSource ss(mac_xiaomi, true,
-      new CryptoPP::HexEncoder(
+    CryptoPP::StringSource ss(mac_xiaomi, true, new CryptoPP::HexEncoder(
         new CryptoPP::StringSink(encoded))
     );
     cout << "BLE ADV from UNKNOWN: RSSI: " << to_string(rssi) 
       << " dBm, MAC: " << encoded << endl;
-    throw logic_error(e.what());
+    throw runtime_error(e.what());
   }
 }
