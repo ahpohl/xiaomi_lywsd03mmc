@@ -171,65 +171,64 @@ string Ble::decryptPayload(string const& t_cipher, string const& t_key,
   int const TAG_SIZE = 4;
   string aad = "\x11";
 
-  // Break the cipher text out into it's
-  //  components: Encrypted and MAC
   string enc = t_cipher.substr(0, t_cipher.length()-TAG_SIZE);
   string tag = t_cipher.substr(t_cipher.length()-TAG_SIZE);
+  string payload_counter = enc.substr(enc.length()-3);
+  string iv = t_iv + payload_counter;
+  string cipher = enc.substr(0, enc.length()-3);
+  
+  if (m_debug) {
+    string encoded;
+    encoded.clear();
+    CryptoPP::StringSource ssk(t_key, true, new CryptoPP::HexEncoder(
+      new CryptoPP::StringSink(encoded), true, 2, "")
+    );
+    cout << "Key    : " << encoded << endl;
+    encoded.clear();
+    CryptoPP::StringSource ssi(iv, true, new CryptoPP::HexEncoder(
+      new CryptoPP::StringSink(encoded), true, 2, "")
+    );
+    cout << "Iv     : " << encoded << endl;
+    encoded.clear();
+    CryptoPP::StringSource ssc(cipher, true, new CryptoPP::HexEncoder(
+      new CryptoPP::StringSink(encoded), true, 2, "")
+    );
+    cout << "Cipher : " << encoded << endl;
+    encoded.clear();
+    CryptoPP::StringSource sst(tag, true, new CryptoPP::HexEncoder(
+      new CryptoPP::StringSink(encoded), true, 2, "")
+    );
+    cout << "Tag    : " << encoded << endl;
+  }
 
   try {
     CryptoPP::CCM< CryptoPP::AES, TAG_SIZE >::Decryption d;
     d.SetKeyWithIV((const CryptoPP::byte*)t_key.data(), t_key.size(), 
-      (const CryptoPP::byte*)t_iv.data(), t_iv.size());
-    d.SpecifyDataLengths(aad.size(), enc.size(), 0);
+      (const CryptoPP::byte*)iv.data(), iv.size());
+    d.SpecifyDataLengths(aad.size(), cipher.size(), 0);
 
-    CryptoPP::AuthenticatedDecryptionFilter df(d, nullptr,
-      CryptoPP::AuthenticatedDecryptionFilter::MAC_AT_BEGIN | 
-      CryptoPP::AuthenticatedDecryptionFilter::THROW_EXCEPTION
-    );
+    CryptoPP::AuthenticatedDecryptionFilter df(d,
+      new CryptoPP::StringSink(plaintext));
 
     // The order of the following calls are important
-    df.ChannelPut(CryptoPP::DEFAULT_CHANNEL,
-      (const CryptoPP::byte*)tag.data(), tag.size());
     df.ChannelPut(CryptoPP::AAD_CHANNEL,
       (const CryptoPP::byte*)aad.data(), aad.size());
     df.ChannelPut(CryptoPP::DEFAULT_CHANNEL,
-      (const CryptoPP::byte*)enc.data(), enc.size());
+      (const CryptoPP::byte*)cipher.data(), cipher.size());
+    df.ChannelPut(CryptoPP::DEFAULT_CHANNEL,
+      (const CryptoPP::byte*)tag.data(), tag.size());
 
     df.ChannelMessageEnd(CryptoPP::AAD_CHANNEL);
     df.ChannelMessageEnd(CryptoPP::DEFAULT_CHANNEL);
-
-    // If the object does not throw, here's the only
-    // opportunity to check the data's integrity
-    bool b = false;
-    b = df.GetLastResult();
-    assert(true == b);
-
-    // Remove data from channel
-    size_t n = (size_t)-1;
-
-    // Plain text recovered from enc.data()
-    df.SetRetrievalChannel(CryptoPP::DEFAULT_CHANNEL);
-    n = (size_t)df.MaxRetrievable();
-    plaintext.resize(n);
-
-    if (n > 0) {
-      df.Get((CryptoPP::byte*)plaintext.data(), n);
-    }
-
-    // All is well - work with data
-    if (m_debug) {
-      cout << "Decrypted and Verified data. Ready for use." << endl;
-    }
   }
-  catch (CryptoPP::InvalidArgument& e)
-  {
-    cerr << "Caught InvalidArgument..." << endl;
+  catch (CryptoPP::InvalidArgument& e) {
     cerr << e.what() << endl;
   }
-  catch (CryptoPP::HashVerificationFilter::HashVerificationFailed& e)
-  {
-    cerr << "Caught HashVerificationFailed..." << endl;
+  catch (CryptoPP::HashVerificationFilter::HashVerificationFailed& e) {
     cerr << e.what() << endl;
+  }
+  if (m_debug) {
+    cout << "Decrypted and verified data" << endl;
   }
 
   return plaintext;
