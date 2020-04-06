@@ -3,6 +3,15 @@
 
 #include <map>
 
+typedef struct {
+    std::string name;
+    std::string type;
+    std::string mac;
+    double temperature;
+    int humidity;
+    int battery_level;
+} device;
+
 class Ble
 {
 public:
@@ -11,18 +20,17 @@ public:
   void setDebug(void);
   void readPacketFile(char* t_file);
   void parsePacket(void);
-  int getTemperature(void) const;
-  int getHumidity(void) const;
-  int getBatteryLevel(void) const;
   
 private:
   bool m_debug;
   std::string m_packet;
-  std::string m_plaintext;
-  static const std::map<std::string, std::string> XIAOMI_TYPE;
-  static const std::map<std::string, std::string> XIAOMI_KEYS;
+  device* m_device;
   std::string decryptPayload(std::string const& t_cipher,
     std::string const& t_key, std::string const& t_iv) const;
+
+  static const std::map<std::string, std::string> XIAOMI_NAME;
+  static const std::map<std::string, std::string> XIAOMI_TYPE;
+  static const std::map<std::string, std::string> XIAOMI_KEYS;
 };
 
 #endif // BLE_HPP

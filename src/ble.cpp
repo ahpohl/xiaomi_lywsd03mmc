@@ -37,14 +37,29 @@ const map<string, string> Ble::XIAOMI_KEYS = {
   {"A4:C1:38:6A:11:C1", "317643d6c4e31929a7a4f833bde9520a"}
 };
 
+const map<string, string> Ble::XIAOMI_NAME = {
+  {"A4:C1:38:4E:16:78", "Office"},
+  {"A4:C1:38:BC:B9:B2", "Kitchen"},
+  {"A4:C1:38:8C:34:B7", "Piano"},
+  {"A4:C1:38:B1:CD:7F", "Sideboard"},
+  {"A4:C1:38:BF:54:5D", "Bedroom"},
+  {"A4:C1:38:80:C5:75", "Charlotte"},
+  {"A4:C1:38:8D:D3:19", "Steffi"},
+  {"A4:C1:38:6A:11:C1", "TV"}
+};
+
 Ble::Ble(void)
 {
   m_debug = false;
-  m_plaintext.clear();
+  m_device = nullptr;
 }
 
 Ble::~Ble(void)
 {
+  if (m_device) {
+    delete m_device;
+  }
+
   if (m_debug) {
     cout << "Ble destructor method called" << endl;
   }
@@ -78,6 +93,8 @@ void Ble::readPacketFile(char* t_file)
 
 void Ble::parsePacket(void)
 {
+  string plaintext;
+
   // check for Xiaomi service data
   size_t pos = 0;
   pos = m_packet.find("\x16\x95\xFE", 15);
@@ -151,7 +168,7 @@ void Ble::parsePacket(void)
   // check encrypted data flags
   if (!(framectrl & 0x0800)) {
     cout << "Plaintext ADV payload" << endl;
-    m_plaintext.assign(m_packet, payload_pos, 5); 
+    plaintext.assign(m_packet, payload_pos, 5); 
     return;
   }
   // lookup encryption key
@@ -173,7 +190,7 @@ void Ble::parsePacket(void)
     new CryptoPP::StringSink(key)));
   string iv = mac_source + m_packet.substr(pos+5, 2) 
     + m_packet.substr(pos+7, 1);
-  m_plaintext = decryptPayload(cipher, key, iv);
+  plaintext = decryptPayload(cipher, key, iv);
 }
 
 string Ble::decryptPayload(string const& t_cipher, string const& t_key, 
@@ -244,25 +261,4 @@ string Ble::decryptPayload(string const& t_cipher, string const& t_key,
   }
 
   return plaintext;
-}
-
-int Ble::getTemperature(void) const
-{
-  int temp = 0;
-
-  return temp;
-}
-
-int Ble::getHumidity(void) const
-{
-  int humidity = 0;
-
-  return humidity;
-}
-
-int Ble::getBatteryLevel(void) const
-{
-  int battery_level = 0;
-
-  return battery_level;
 }
