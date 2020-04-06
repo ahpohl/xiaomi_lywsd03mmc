@@ -288,11 +288,25 @@ void Ble::setDevice(void)
   m_dev->rssi = m_packet.back();
   m_dev->type = XIAOMI_TYPE.at(m_packet.substr(pos+5, 2));
   m_dev->name = XIAOMI_NAME.at(m_dev->mac_address);
-  m_dev->temperature = ((m_packet[pos+18] << 8) | 
-    (m_packet[pos+17] & 0xFF)) / 10.0;
-  m_dev->battery_level = m_packet[pos+16] / 1.0;
-  m_dev->humidity = ((m_packet[pos+15] << 8) | 
-    (m_packet[pos+14] & 0xFF)) / 100.0;
+
+  size_t vpos = pos+14;  
+  uint8_t vlength = m_packet[vpos+2] & 0xFF;
+  uint8_t vtype = m_packet[vpos] & 0xFF;
+  if (vlength == 2) {
+    double value = ((m_packet[vpos+4] << 8) | 
+      (m_packet[vpos+3] & 0xFF)) / 10.0;
+    switch (vtype) {
+    case 0x06:
+      m_dev->humidity = value;
+      break;
+    case 0x04:
+      m_dev->temperature = value;
+      break;
+    default:
+      cout << "Unknown payload type" << endl;
+      break;
+    }
+  }
 
   if (m_debug) {
     cout << "Name   : " << m_dev->name << endl;
