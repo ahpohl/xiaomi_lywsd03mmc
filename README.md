@@ -23,6 +23,6 @@ make
 This repository serves as the basis for supporting the device in ESPHome. Development of a [xiaomi_lywsd03mmc](https://github.com/ahpohl/esphome) sensor component has been initiated. The [xiaomi_ble](https://github.com/esphome/esphome/tree/dev/esphome/components/xiaomi_ble) component needs to be extended with the payload decryption code given here. Additionally the configuration of the sensor needs to include the encryption key. 
 
 # Resources
- - ESPHome [xiaomi_lywsd03mmc](https://github.com/esphome/feature-requests/issues/552) support thread
+ - ESPHome xiaomi_lywsd03mmc [support thread](https://github.com/esphome/feature-requests/issues/552)
  - [Crypto++](https://www.cryptopp.com/) library expample AES-CCM with AE
  - Remote PCAP [tutorial](https://egorovandreyrm.com/pcap-remote-tutorial/)
