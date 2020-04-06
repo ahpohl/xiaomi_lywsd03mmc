@@ -41,7 +41,7 @@ int main(int argc, char* argv[])
 
   if (help)
   {
-    cout << "Decrypt Bluetooth LE ADV Packets" << endl;
+    cout << "Decrypt Xiaomi Bluetooth LE ADV Packets" << endl;
     cout << endl << "Usage: " << argv[0] << " [options]" << endl << endl;
     cout << "\
   -h --help              Show help message\n\
