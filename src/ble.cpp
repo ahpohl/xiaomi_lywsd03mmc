@@ -293,14 +293,13 @@ void Ble::setDevice(void)
   uint8_t vlength = m_packet[vpos+2] & 0xFF;
   uint8_t vtype = m_packet[vpos] & 0xFF;
   if (vlength == 2) {
-    double value = ((m_packet[vpos+4] << 8) | 
-      (m_packet[vpos+3] & 0xFF)) / 10.0;
+    int16_t value = ((m_packet[vpos+4] << 8) | (m_packet[vpos+3] & 0xFF));
     switch (vtype) {
     case 0x06:
-      m_dev->humidity = value;
+      m_dev->humidity = value / 10.0f;
       break;
     case 0x04:
-      m_dev->temperature = value;
+      m_dev->temperature = value / 10.0f;
       break;
     default:
       cout << "Unknown payload type" << endl;
