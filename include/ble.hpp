@@ -23,7 +23,6 @@ public:
   void readPacketFile(char* t_file);
   void parsePacket(void);
   void setDevice(void);
-  void getDevice(void);
   
 private:
   bool m_debug;

@@ -293,14 +293,14 @@ void Ble::setDevice(void)
   m_dev->battery_level = m_packet[pos+16] / 1.0;
   m_dev->humidity = ((m_packet[pos+15] << 8) | 
     (m_packet[pos+14] & 0xFF)) / 100.0;
-  
+
   if (m_debug) {
     cout << "Name   : " << m_dev->name << endl;
     cout << "Type   : " << m_dev->type << endl;
     cout << "MAC    : " << m_dev->mac_address << endl;
     cout << "Packet : " << m_dev->packet_id << endl;
     cout << "RSSI   : " << m_dev->rssi << " dBm" << endl;
-    cout << "Temp   : " << fixed << setprecision(1) << m_dev->temperature 
+    cout << "Temp   : " << fixed << setprecision(1) << m_dev->temperature
       << " °C" << endl;
     cout << "Humid  : " << m_dev->humidity << " %" << endl;
     cout << "Batt   : " << m_dev->battery_level << " V" << endl;
