@@ -307,6 +307,9 @@ void Ble::setDevice(void)
       break;
     }
   }
+  if (vlength == 1 && vtype == 0x0A) {
+    m_dev->battery_level = m_packet[vpos+3] & 0xFF;
+  }
 
   if (m_debug) {
     cout << "Name   : " << m_dev->name << endl;
@@ -317,6 +320,6 @@ void Ble::setDevice(void)
     cout << "Temp   : " << fixed << setprecision(1) << m_dev->temperature
       << " °C" << endl;
     cout << "Humid  : " << m_dev->humidity << " %" << endl;
-    cout << "Batt   : " << m_dev->battery_level << " V" << endl;
+    cout << "Batt   : " << m_dev->battery_level << " %" << endl;
   }
 }

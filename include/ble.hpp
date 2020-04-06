@@ -11,7 +11,7 @@ typedef struct {
     int rssi;
     double temperature;
     double humidity;
-    double battery_level;
+    unsigned int battery_level;
 } device;
 
 class Ble
