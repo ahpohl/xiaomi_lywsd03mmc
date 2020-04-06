@@ -20,7 +20,7 @@ make
 ```
 
 # Todo
-This repository serves as the basis for supporting the device in ESPHome. Development of a [xiaomi_lywsd03mmc](https://github.com/ahpohl/esphome) sensor component has been initiated. The [xiaomi_ble](https://github.com/ahpohl/esphome/tree/dev/esphome/components/xiaomi_ble) component needs to be extended with the payload decryption code given here. Additionally the configuration of the sensor needs to include the encryption key. Contributions are welcomed.
+This repository serves as the basis for supporting the device in ESPHome. Development of a [xiaomi_lywsd03mmc](https://github.com/ahpohl/esphome) sensor component has been initiated. The [xiaomi_ble](https://github.com/ahpohl/esphome/tree/dev/esphome/components/xiaomi_ble) component needs to be extended with the payload decryption code given here. Additionally the configuration of the sensor needs to include the encryption key. Contributions are most welcome.
 
 # Resources
  - ESPHome xiaomi_lywsd03mmc [support thread](https://github.com/esphome/feature-requests/issues/552)
