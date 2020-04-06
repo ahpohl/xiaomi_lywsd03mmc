@@ -4,14 +4,14 @@
 #include <map>
 
 typedef struct {
-    int packet_id;
+    size_t packet_id;
     std::string name;
     std::string type;
     std::string mac_address;
     int rssi;
     double temperature;
-    int humidity;
-    int battery_level;
+    double humidity;
+    double battery_level;
 } device;
 
 class Ble

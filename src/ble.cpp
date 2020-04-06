@@ -280,7 +280,7 @@ void Ble::setDevice(void)
   if (pos == string::npos) {
     throw runtime_error("Xiaomi service data not found");
   }
-  m_dev->packet_id = m_packet[pos+7];
+  m_dev->packet_id = (m_packet[pos+7] & 0xFF);
   string mac(m_packet.substr(pos+8, 6));
   reverse(mac.begin(), mac.end());
   CryptoPP::StringSource ssm(mac, true, new CryptoPP::HexEncoder(
@@ -288,20 +288,21 @@ void Ble::setDevice(void)
   m_dev->rssi = m_packet.back();
   m_dev->type = XIAOMI_TYPE.at(m_packet.substr(pos+5, 2));
   m_dev->name = XIAOMI_NAME.at(m_dev->mac_address);
-  m_dev->temperature = ((m_packet[pos+15] << 8) | 
+  m_dev->temperature = ((m_packet[pos+18] << 8) | 
+    (m_packet[pos+17] & 0xFF)) / 10.0;
+  m_dev->battery_level = m_packet[pos+16] / 1.0;
+  m_dev->humidity = ((m_packet[pos+15] << 8) | 
     (m_packet[pos+14] & 0xFF)) / 100.0;
-  m_dev->humidity = m_packet[pos+16];
-  m_dev->battery_level = (m_packet[pos+18] << 8) | 
-    (m_packet[pos+17] & 0xFF);
   
   if (m_debug) {
     cout << "Name   : " << m_dev->name << endl;
     cout << "Type   : " << m_dev->type << endl;
     cout << "MAC    : " << m_dev->mac_address << endl;
     cout << "Packet : " << m_dev->packet_id << endl;
+    cout << "RSSI   : " << m_dev->rssi << " dBm" << endl;
     cout << "Temp   : " << fixed << setprecision(1) << m_dev->temperature 
       << " °C" << endl;
     cout << "Humid  : " << m_dev->humidity << " %" << endl;
-    cout << "Batt   : " << m_dev->battery_level << " mV" << endl;
+    cout << "Batt   : " << m_dev->battery_level << " V" << endl;
   }
 }
