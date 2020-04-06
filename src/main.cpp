@@ -57,6 +57,7 @@ int main(int argc, char* argv[])
   }
   myBle.readPacketFile(packet_file);
   myBle.parsePacket();
+  myBle.setDevice();
 
   return 0;
 }

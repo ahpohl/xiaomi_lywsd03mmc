@@ -51,13 +51,13 @@ const map<string, string> Ble::XIAOMI_NAME = {
 Ble::Ble(void)
 {
   m_debug = false;
-  m_device = nullptr;
+  m_dev = nullptr;
 }
 
 Ble::~Ble(void)
 {
-  if (m_device) {
-    delete m_device;
+  if (m_dev) {
+    delete m_dev;
   }
 
   if (m_debug) {
@@ -269,4 +269,39 @@ string Ble::decryptPayload(string const& t_cipher, string const& t_key,
   }
 
   return plaintext;
+}
+
+void Ble::setDevice(void)
+{
+  m_dev = new device;
+
+  size_t pos = 0;
+  pos = m_packet.find("\x16\x95\xFE", 15);
+  if (pos == string::npos) {
+    throw runtime_error("Xiaomi service data not found");
+  }
+  m_dev->packet_id = m_packet[pos+7];
+  string mac(m_packet.substr(pos+8, 6));
+  reverse(mac.begin(), mac.end());
+  CryptoPP::StringSource ssm(mac, true, new CryptoPP::HexEncoder(
+    new CryptoPP::StringSink(m_dev->mac_address), true, 2, ":"));
+  m_dev->rssi = m_packet.back();
+  m_dev->type = XIAOMI_TYPE.at(m_packet.substr(pos+5, 2));
+  m_dev->name = XIAOMI_NAME.at(m_dev->mac_address);
+  m_dev->temperature = ((m_packet[pos+15] << 8) | 
+    (m_packet[pos+14] & 0xFF)) / 100.0;
+  m_dev->humidity = m_packet[pos+16];
+  m_dev->battery_level = (m_packet[pos+18] << 8) | 
+    (m_packet[pos+17] & 0xFF);
+  
+  if (m_debug) {
+    cout << "Name   : " << m_dev->name << endl;
+    cout << "Type   : " << m_dev->type << endl;
+    cout << "MAC    : " << m_dev->mac_address << endl;
+    cout << "Packet : " << m_dev->packet_id << endl;
+    cout << "Temp   : " << fixed << setprecision(1) << m_dev->temperature 
+      << " °C" << endl;
+    cout << "Humid  : " << m_dev->humidity << " %" << endl;
+    cout << "Batt   : " << m_dev->battery_level << " mV" << endl;
+  }
 }
