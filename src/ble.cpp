@@ -93,8 +93,6 @@ void Ble::readPacketFile(char* t_file)
 
 void Ble::parsePacket(void)
 {
-  string plaintext;
-
   // check for Xiaomi service data
   size_t pos = 0;
   pos = m_packet.find("\x16\x95\xFE", 15);
@@ -168,7 +166,6 @@ void Ble::parsePacket(void)
   // check encrypted data flags
   if (!(framectrl & 0x0800)) {
     cout << "Plaintext ADV payload" << endl;
-    plaintext.assign(m_packet, payload_pos, 5); 
     return;
   }
   // lookup encryption key
@@ -190,7 +187,9 @@ void Ble::parsePacket(void)
     new CryptoPP::StringSink(key)));
   string iv = mac_source + m_packet.substr(pos+5, 2) 
     + m_packet.substr(pos+7, 1);
-  plaintext = decryptPayload(cipher, key, iv);
+  string plaintext = decryptPayload(cipher, key, iv);
+  // replace the encrypted payload with plaintext
+  m_packet.replace(payload_pos, payload_length, plaintext);
 }
 
 string Ble::decryptPayload(string const& t_cipher, string const& t_key, 

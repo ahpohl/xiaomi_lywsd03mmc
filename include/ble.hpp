@@ -20,13 +20,16 @@ public:
   void setDebug(void);
   void readPacketFile(char* t_file);
   void parsePacket(void);
+  void getDevice(void);
   
 private:
   bool m_debug;
   std::string m_packet;
   device* m_device;
+
   std::string decryptPayload(std::string const& t_cipher,
     std::string const& t_key, std::string const& t_iv) const;
+  void setDevice(void);
 
   static const std::map<std::string, std::string> XIAOMI_NAME;
   static const std::map<std::string, std::string> XIAOMI_TYPE;
