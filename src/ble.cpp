@@ -188,8 +188,18 @@ void Ble::parsePacket(void)
   string iv = mac_source + m_packet.substr(pos+5, 2) 
     + m_packet.substr(pos+7, 1);
   string plaintext = decryptPayload(cipher, key, iv);
+  if (plaintext.length() != 5) {
+    throw runtime_error("Plaintext invalid length, decryption failed.");
+  }
   // replace the encrypted payload with plaintext
-  m_packet.replace(payload_pos, payload_length, plaintext);
+  m_packet.replace(payload_pos, plaintext.length(), plaintext);
+  if (m_debug) {
+    string encoded;
+    CryptoPP::StringSource ss(m_packet, true, new CryptoPP::HexEncoder(
+      new CryptoPP::StringSink(encoded), true, 4, " ")
+    );
+    cout << "Packet : " << encoded << endl;
+  }
 }
 
 string Ble::decryptPayload(string const& t_cipher, string const& t_key, 
@@ -207,7 +217,6 @@ string Ble::decryptPayload(string const& t_cipher, string const& t_key,
   
   if (m_debug) {
     string encoded;
-    encoded.clear();
     CryptoPP::StringSource ssk(t_key, true, new CryptoPP::HexEncoder(
       new CryptoPP::StringSink(encoded), true, 2, "")
     );
