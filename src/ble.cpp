@@ -259,10 +259,10 @@ string Ble::decryptPayload(string const& t_cipher, string const& t_key,
     df.ChannelMessageEnd(CryptoPP::DEFAULT_CHANNEL);
   }
   catch (CryptoPP::InvalidArgument& e) {
-    cerr << e.what() << endl;
+    throw runtime_error(e.what());
   }
   catch (CryptoPP::HashVerificationFilter::HashVerificationFailed& e) {
-    cerr << e.what() << endl;
+    throw runtime_error(e.what());
   }
   if (m_debug) {
     cout << "Decrypted and verified data" << endl;
