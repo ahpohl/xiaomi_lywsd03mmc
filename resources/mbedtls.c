@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdint.h>
 #include <mbedtls/ccm.h>
 
@@ -35,11 +36,21 @@ static TestVector const testVectorCCM = {
     .ivsize      = 12
 };
 
+char* as_hex(unsigned char const* a, size_t a_size)
+{
+    char* s = malloc(a_size * 2 + 1);
+    for (size_t i = 0; i < a_size; i++) {
+        sprintf(s + i * 2, "%02X", a[i]);
+    }
+    return s;
+}
+
 int main(int argc, char* argv[])
 {
   int ret = 0;
   uint8_t plaintext[MAX_PLAINTEXT_LEN];
-  mbedtls_ccm_context* ctx = NULL;
+  mbedtls_ccm_context* ctx;
+  ctx = (mbedtls_ccm_context*) malloc(sizeof(mbedtls_ccm_context));
   mbedtls_ccm_init(ctx);
   ret = mbedtls_ccm_setkey(ctx,
     MBEDTLS_CIPHER_ID_AES,
@@ -48,6 +59,7 @@ int main(int argc, char* argv[])
   );
   if (ret) {
     printf("CCM setkey failed.");
+    return 1;
   }
   ret = mbedtls_ccm_auth_decrypt(ctx,
     testVectorCCM.datasize,
@@ -67,11 +79,31 @@ int main(int argc, char* argv[])
       printf("Bad input parameters to the function.\n");
     } else if (ret == MBEDTLS_ERR_CCM_HW_ACCEL_FAILED) {
       printf("CCM hardware accelerator failed.\n");
-    } else {
-      printf("Decryption successful\n");
-      printf("Plaintext: %s", plaintext);
     }
+  } else {
+    printf("Decryption successful\n");
   }
+
+  char * encoded;
+  encoded = as_hex(testVectorCCM.key, AES_KEY_SIZE/8);
+  printf("Key        : %s\n", encoded);
+  free(encoded);
+  encoded = as_hex(testVectorCCM.iv, testVectorCCM.ivsize);
+  printf("Iv         : %s\n", encoded);
+  free(encoded);
+  encoded = as_hex(testVectorCCM.ciphertext, testVectorCCM.datasize);
+  printf("Cipher     : %s\n", encoded);
+  free(encoded);
+  encoded = as_hex(testVectorCCM.tag, testVectorCCM.tagsize);
+  printf("Tag        : %s\n", encoded);
+  free(encoded);
+  encoded = as_hex(testVectorCCM.plaintext, testVectorCCM.datasize);
+  printf("Plaintext  : %s\n", encoded);
+  free(encoded);
+  encoded = as_hex(plaintext, testVectorCCM.datasize);
+  printf("Plaintext  : %s\n", encoded);
+  free(encoded);
+
   mbedtls_ccm_free(ctx);
 
   return 0;
