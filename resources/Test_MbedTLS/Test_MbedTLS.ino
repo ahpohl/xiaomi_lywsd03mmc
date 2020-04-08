@@ -1,26 +1,30 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
 #include <mbedtls/ccm.h>
+
+#if defined(ESP8266) || defined(ESP32)
+#include <pgmspace.h>
+#else
+#include <avr/pgmspace.h>
+#endif
 
 #define MAX_PLAINTEXT_LEN 64
 #define AES_KEY_SIZE 128
 
-typedef struct TestVector {
-  char const* name;
-  uint8_t key[32];
-  uint8_t plaintext[MAX_PLAINTEXT_LEN];
-  uint8_t ciphertext[MAX_PLAINTEXT_LEN];
-  uint8_t authdata[20];
-  uint8_t iv[12];
-  uint8_t tag[16];
-  size_t authsize;
-  size_t datasize;
-  size_t tagsize;
-  size_t ivsize;
+typedef struct TestVector
+{
+    const char *name;
+    uint8_t key[32];
+    uint8_t plaintext[MAX_PLAINTEXT_LEN];
+    uint8_t ciphertext[MAX_PLAINTEXT_LEN];
+    uint8_t authdata[20];
+    uint8_t iv[12];
+    uint8_t tag[16];
+    size_t authsize;
+    size_t datasize;
+    size_t tagsize;
+    size_t ivsize;
 } TestVector;
 
-static TestVector const testVectorCCM = {
+static TestVector const testVectorCCM PROGMEM = {
     .name        = "AES-128 CCM BLE ADV",
     .key         = {0xE9, 0xEF, 0xAA, 0x68, 0x73, 0xF9, 0xF9, 0xC8,
                     0x7A, 0x5E, 0x75, 0xA5, 0xF8, 0x14, 0x80, 0x1C},
@@ -38,36 +42,38 @@ static TestVector const testVectorCCM = {
 
 char* as_hex(unsigned char const* a, size_t a_size)
 {
-    char* s = malloc(a_size * 2 + 1);
+    char* s = (char*) malloc(a_size * 2 + 1);
     for (size_t i = 0; i < a_size; i++) {
         sprintf(s + i * 2, "%02X", a[i]);
     }
     return s;
 }
 
-int main(int argc, char* argv[])
-{
+void setup() {
+  Serial.begin(9600);
+  Serial.println();
+
   int ret = 0;
   uint8_t plaintext[MAX_PLAINTEXT_LEN];
 
-  printf("Test vector for BLE ADV packet\n");
+  Serial.println("Test vector for BLE ADV packet");
   char * encoded;
   encoded = as_hex(testVectorCCM.key, AES_KEY_SIZE/8);
-  printf("Key        : %s\n", encoded);
+  Serial.printf("Key        : %s\n\r", encoded);
   free(encoded);
   encoded = as_hex(testVectorCCM.iv, testVectorCCM.ivsize);
-  printf("Iv         : %s\n", encoded);
+  Serial.printf("Iv         : %s\n\r", encoded);
   free(encoded);
   encoded = as_hex(testVectorCCM.ciphertext, testVectorCCM.datasize);
-  printf("Cipher     : %s\n", encoded);
+  Serial.printf("Cipher     : %s\n\r", encoded);
   free(encoded);
   encoded = as_hex(testVectorCCM.plaintext, testVectorCCM.datasize);
-  printf("Plaintext  : %s\n", encoded);
+  Serial.printf("Plaintext  : %s\n\r", encoded);
   free(encoded);
   encoded = as_hex(testVectorCCM.tag, testVectorCCM.tagsize);
-  printf("Tag        : %s\n", encoded);
+  Serial.printf("Tag        : %s\n\r", encoded);
   free(encoded);
-
+  
   mbedtls_ccm_context* ctx;
   ctx = (mbedtls_ccm_context*) malloc(sizeof(mbedtls_ccm_context));
   mbedtls_ccm_init(ctx);
@@ -77,8 +83,7 @@ int main(int argc, char* argv[])
     AES_KEY_SIZE
   );
   if (ret) {
-    printf("CCM setkey failed.\n");
-    return 1;
+    Serial.println("CCM setkey failed.");
   }
   ret = mbedtls_ccm_auth_decrypt(ctx,
     testVectorCCM.datasize,
@@ -91,23 +96,25 @@ int main(int argc, char* argv[])
     testVectorCCM.tag,
     testVectorCCM.tagsize 
   );
+
   if (ret) {
     if (ret == MBEDTLS_ERR_CCM_AUTH_FAILED) {
-      printf("Authenticated decryption failed.\n");
+      Serial.println("Authenticated decryption failed.");
     } else if (ret == MBEDTLS_ERR_CCM_BAD_INPUT) {
-      printf("Bad input parameters to the function.\n");
+      Serial.println("Bad input parameters to the function.");
     } else if (ret == MBEDTLS_ERR_CCM_HW_ACCEL_FAILED) {
-      printf("CCM hardware accelerator failed.\n");
-    }
+      Serial.println("CCM hardware accelerator failed."); 
+    } 
   } else {
-    printf("Decryption successful\n");
+    Serial.println("Decryption successful");
   }
-
+  
   encoded = as_hex(plaintext, testVectorCCM.datasize);
-  printf("Plaintext  : %s\n", encoded);
+  Serial.printf("Plaintext  : %s\n\r", encoded);
   free(encoded);
 
-  mbedtls_ccm_free(ctx);
+  mbedtls_ccm_free(ctx);  
+}
 
-  return 0;
+void loop() {
 }
