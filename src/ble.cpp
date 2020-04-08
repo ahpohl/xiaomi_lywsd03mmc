@@ -8,6 +8,7 @@
 #include <cryptopp/filters.h>
 #include <cryptopp/aes.h>
 #include <cryptopp/ccm.h>
+#include <cryptopp/gcm.h>
 #include <cryptopp/hex.h>
 #include <assert.h>
 
@@ -239,7 +240,7 @@ string Ble::decryptPayload(string const& t_cipher, string const& t_key,
   }
 
   try {
-    CryptoPP::CCM< CryptoPP::AES, TAG_SIZE >::Decryption d;
+    CryptoPP::GCM<CryptoPP::AES>::Decryption d;
     d.SetKeyWithIV((const CryptoPP::byte*)t_key.data(), t_key.size(), 
       (const CryptoPP::byte*)iv.data(), iv.size());
     d.SpecifyDataLengths(aad.size(), cipher.size(), 0);
