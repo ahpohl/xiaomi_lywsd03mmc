@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <mbedtls/config.h>
+#include <mbedtls/cipher.h>
 #include <mbedtls/ccm.h>
 
 #define MAX_PLAINTEXT_LEN 64
@@ -129,6 +131,12 @@ int main(int argc, char* argv[])
   int ret = 0;
   uint8_t plaintext[MAX_PLAINTEXT_LEN];
 
+  ret = mbedtls_ccm_self_test(1);
+  if (ret) {
+	printf("CCM self test failed.\n");
+	return 1;
+  }
+
   printf("Name       : %s\n", testVectorCCM.name);
   char * encoded;
   encoded = as_hex(testVectorCCM.key, AES_KEY_SIZE/8);
@@ -171,11 +179,11 @@ int main(int argc, char* argv[])
   );
   if (ret) {
     if (ret == MBEDTLS_ERR_CCM_AUTH_FAILED) {
-      printf("Authenticated decryption failed.\n");
+      fprintf(stderr, "Authenticated decryption failed.\n");
     } else if (ret == MBEDTLS_ERR_CCM_BAD_INPUT) {
-      printf("Bad input parameters to the function.\n");
+      fprintf(stderr, "Bad input parameters to the function.\n");
     } else if (ret == MBEDTLS_ERR_CCM_HW_ACCEL_FAILED) {
-      printf("CCM hardware accelerator failed.\n");
+      fprintf(stderr, "CCM hardware accelerator failed.\n");
     }
   } else {
     printf("Decryption successful\n");
