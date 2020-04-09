@@ -20,7 +20,6 @@ typedef struct TestVector {
   size_t ivsize;
 } TestVector;
 
-/*
 static TestVector const testVectorCCM = {
     .name        = "AES-128 CCM BLE ADV",
     .key         = {0xE9, 0xEF, 0xAA, 0x68, 0x73, 0xF9, 0xF9, 0xC8,
@@ -36,7 +35,6 @@ static TestVector const testVectorCCM = {
     .tagsize     = 4,
     .ivsize      = 12
 };
-*/
 
 // https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38c.pdf
 // Klen = 128, Tlen =32, Nlen = 56, Alen = 64, and Plen = 32 (bits)
@@ -93,6 +91,7 @@ static TestVector const testVectorCCM = {
 //CTX e3b201a9f5b71a7a9b1ceaeccd97e70b6176aad9a4428aa5
 //TAG 484392fbc1b09951
 
+/*
 static TestVector const testVectorCCM = {
     .name        = "Gladman's Test Vector 003",
     .key         = {0x40, 0x41, 0x42, 0x43, 0x44, 0x45, 0x46, 0x47,
@@ -114,6 +113,7 @@ static TestVector const testVectorCCM = {
     .tagsize     = 8,
     .ivsize      = 12
 };
+*/
 
 char* as_hex(unsigned char const* a, size_t a_size)
 {
@@ -147,10 +147,9 @@ int main(int argc, char* argv[])
   printf("Tag        : %s\n", encoded);
   free(encoded);
 
-  mbedtls_ccm_context* ctx;
-  ctx = (mbedtls_ccm_context*) malloc(sizeof(mbedtls_ccm_context));
-  mbedtls_ccm_init(ctx);
-  ret = mbedtls_ccm_setkey(ctx,
+  mbedtls_ccm_context ctx;
+  mbedtls_ccm_init(&ctx);
+  ret = mbedtls_ccm_setkey(&ctx,
     MBEDTLS_CIPHER_ID_AES,
     testVectorCCM.key,
     AES_KEY_SIZE
@@ -159,7 +158,7 @@ int main(int argc, char* argv[])
     printf("CCM setkey failed.\n");
     return 1;
   }
-  ret = mbedtls_ccm_auth_decrypt(ctx,
+  ret = mbedtls_ccm_auth_decrypt(&ctx,
     testVectorCCM.datasize,
     testVectorCCM.iv,
     testVectorCCM.ivsize,
@@ -186,7 +185,7 @@ int main(int argc, char* argv[])
   printf("Plaintext  : %s\n", encoded);
   free(encoded);
 
-  mbedtls_ccm_free(ctx);
+  mbedtls_ccm_free(&ctx);
 
   return 0;
 }
