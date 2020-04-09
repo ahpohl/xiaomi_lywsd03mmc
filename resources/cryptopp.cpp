@@ -1,9 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include <mbedtls/config.h>
-#include <mbedtls/cipher.h>
-#include <mbedtls/ccm.h>
+
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+
+#include <cryptopp/cryptlib.h>
+#include <cryptopp/filters.h>
+#include <cryptopp/aes.h>
+#include <cryptopp/ccm.h>
+#include <cryptopp/hex.h>
 
 #define MAX_PLAINTEXT_LEN 64
 #define AES_KEY_SIZE 128
@@ -22,7 +29,8 @@ typedef struct TestVector {
   size_t ivsize;
 } TestVector;
 
-static TestVector const testVectorCCM = {
+/*
+static TestVector constexpr testVectorCCM = {
     .name        = "AES-128 CCM BLE ADV",
     .key         = {0xE9, 0xEF, 0xAA, 0x68, 0x73, 0xF9, 0xF9, 0xC8,
                     0x7A, 0x5E, 0x75, 0xA5, 0xF8, 0x14, 0x80, 0x1C},
@@ -37,10 +45,11 @@ static TestVector const testVectorCCM = {
     .tagsize     = 4,
     .ivsize      = 12
 };
+*/
 
 // https://www.cryptopp.com/wiki/CCM_Mode
 /*
-static TestVector const testVectorCCM = {
+static TestVector constexpr testVectorCCM = {
     .name        = "Gladman's Test Vector 003",
     .key         = {0x40, 0x41, 0x42, 0x43, 0x44, 0x45, 0x46, 0x47,
                     0x48, 0x49, 0x4a, 0x4b, 0x4c, 0x4d, 0x4e, 0x4f},
@@ -65,7 +74,7 @@ static TestVector const testVectorCCM = {
 
 char* as_hex(unsigned char const* a, size_t a_size)
 {
-    char* s = malloc(a_size * 2 + 1);
+    char* s = (char*) malloc(a_size * 2 + 1);
     for (size_t i = 0; i < a_size; i++) {
         sprintf(s + i * 2, "%02X", a[i]);
     }
@@ -74,15 +83,6 @@ char* as_hex(unsigned char const* a, size_t a_size)
 
 int main(int argc, char* argv[])
 {
-  int ret = 0;
-  uint8_t plaintext[MAX_PLAINTEXT_LEN];
-
-  ret = mbedtls_ccm_self_test(1);
-  if (ret) {
-	printf("AES-CCM self test failed.\n");
-	return 1;
-  }
-
   printf("Name       : %s\n", testVectorCCM.name);
   char * encoded;
   encoded = as_hex(testVectorCCM.key, AES_KEY_SIZE/8);
@@ -101,45 +101,42 @@ int main(int argc, char* argv[])
   printf("Tag        : %s\n", encoded);
   free(encoded);
 
-  mbedtls_ccm_context ctx;
-  mbedtls_ccm_init(&ctx);
-  ret = mbedtls_ccm_setkey(&ctx,
-    MBEDTLS_CIPHER_ID_AES,
-    testVectorCCM.key,
-    AES_KEY_SIZE
-  );
-  if (ret) {
-    printf("CCM setkey failed.\n");
-    return 1;
+  std::string plaintext;
+
+  try {
+    CryptoPP::CCM<CryptoPP::AES, testVectorCCM.tagsize>::Decryption d;
+    d.SetKeyWithIV(testVectorCCM.key, AES_KEY_SIZE/8, testVectorCCM.iv,
+    		testVectorCCM.ivsize);
+    d.SpecifyDataLengths(testVectorCCM.authsize, testVectorCCM.datasize, 0);
+
+    CryptoPP::AuthenticatedDecryptionFilter df(d,
+      new CryptoPP::StringSink(plaintext));
+
+    // The order of the following calls are important
+    df.ChannelPut(CryptoPP::AAD_CHANNEL, testVectorCCM.authdata,
+    		testVectorCCM.authsize);
+    df.ChannelPut(CryptoPP::DEFAULT_CHANNEL, testVectorCCM.ciphertext,
+    		testVectorCCM.datasize);
+    df.ChannelPut(CryptoPP::DEFAULT_CHANNEL, testVectorCCM.tag,
+    		testVectorCCM.tagsize);
+
+    df.ChannelMessageEnd(CryptoPP::AAD_CHANNEL);
+    df.ChannelMessageEnd(CryptoPP::DEFAULT_CHANNEL);
   }
-  ret = mbedtls_ccm_auth_decrypt(&ctx,
-    testVectorCCM.datasize,
-    testVectorCCM.iv,
-    testVectorCCM.ivsize,
-    testVectorCCM.authdata,
-    testVectorCCM.datasize,
-    testVectorCCM.ciphertext,
-    plaintext,
-    testVectorCCM.tag,
-    testVectorCCM.tagsize 
-  );
-  if (ret) {
-    if (ret == MBEDTLS_ERR_CCM_AUTH_FAILED) {
-      fprintf(stderr, "Authenticated decryption failed.\n");
-    } else if (ret == MBEDTLS_ERR_CCM_BAD_INPUT) {
-      fprintf(stderr, "Bad input parameters to the function.\n");
-    } else if (ret == MBEDTLS_ERR_CCM_HW_ACCEL_FAILED) {
-      fprintf(stderr, "CCM hardware accelerator failed.\n");
-    }
-  } else {
-    printf("Decryption successful\n");
+  catch (CryptoPP::InvalidArgument& e) {
+    throw std::runtime_error(e.what());
+  }
+  catch (CryptoPP::HashVerificationFilter::HashVerificationFailed& e) {
+    throw std::runtime_error(e.what());
   }
 
-  encoded = as_hex(plaintext, testVectorCCM.datasize);
-  printf("Plaintext  : %s\n", encoded);
-  free(encoded);
+  std::cout << std::endl;
+  std::cout << "Crypto++   : decrypted and verified data" << std::endl;
 
-  mbedtls_ccm_free(&ctx);
+  std::string enc;
+  CryptoPP::StringSource ssk(plaintext, true, new CryptoPP::HexEncoder(
+    new CryptoPP::StringSink(enc), true, 2, ""));
+  std::cout << "Plaintext  : " << enc << std::endl;
 
   return 0;
 }

@@ -23,7 +23,7 @@ public:
   void readPacketFile(char* t_file);
   void parsePacket(void);
   void setDevice(void);
-  
+
 private:
   bool m_debug;
   std::string m_packet;
