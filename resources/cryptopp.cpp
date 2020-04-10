@@ -17,18 +17,19 @@
 
 typedef struct TestVector {
   char const* name;
-  uint8_t key[32];
-  uint8_t plaintext[MAX_PLAINTEXT_LEN];
-  uint8_t ciphertext[MAX_PLAINTEXT_LEN];
-  uint8_t authdata[MAX_PLAINTEXT_LEN];
-  uint8_t iv[12];
-  uint8_t tag[16];
+  unsigned char key[32];
+  unsigned char plaintext[MAX_PLAINTEXT_LEN];
+  unsigned char ciphertext[MAX_PLAINTEXT_LEN];
+  unsigned char authdata[MAX_PLAINTEXT_LEN];
+  unsigned char iv[12];
+  unsigned char tag[16];
   size_t authsize;
   size_t datasize;
   size_t tagsize;
   size_t ivsize;
 } TestVector;
 
+/*
 static TestVector constexpr testVectorCCM = {
     .name        = "AES-128 CCM BLE ADV",
     .key         = {0xE9, 0xEF, 0xAA, 0x68, 0x73, 0xF9, 0xF9, 0xC8,
@@ -44,9 +45,9 @@ static TestVector constexpr testVectorCCM = {
     .tagsize     = 4,
     .ivsize      = 12
 };
+*/
 
 // mbedtls/tests/suites/test_suite_cipher.ccm.data
-/*
 static TestVector constexpr testVectorCCM = {
     .name        = "AES-128 CCM NIST #25",
     .key         = {0xf9, 0xfd, 0xca, 0x4a, 0xc6, 0x4f, 0xe7, 0xf0,
@@ -68,7 +69,6 @@ static TestVector constexpr testVectorCCM = {
     .tagsize     = 4,
     .ivsize      = 7
 };
-*
 
 // https://www.cryptopp.com/wiki/CCM_Mode
 /*
@@ -124,6 +124,38 @@ int main(int argc, char* argv[])
   printf("Tag        : %s\n", encoded);
   free(encoded);
 
+  std::string cipher;
+
+  try {
+    CryptoPP::CCM<CryptoPP::AES, testVectorCCM.tagsize>::Encryption e;
+    e.SetKeyWithIV(testVectorCCM.key, AES_KEY_SIZE/8, testVectorCCM.iv,
+      		testVectorCCM.ivsize);
+    e.SpecifyDataLengths(testVectorCCM.authsize, testVectorCCM.datasize, 0);
+
+    CryptoPP::AuthenticatedEncryptionFilter ef(e,
+    		new CryptoPP::StringSink(cipher));
+
+    ef.ChannelPut(CryptoPP::AAD_CHANNEL, testVectorCCM.authdata,
+    		testVectorCCM.authsize);
+    ef.ChannelMessageEnd(CryptoPP::AAD_CHANNEL);
+    ef.ChannelPut(CryptoPP::DEFAULT_CHANNEL, testVectorCCM.plaintext,
+    		testVectorCCM.datasize);
+    ef.ChannelMessageEnd(CryptoPP::DEFAULT_CHANNEL);
+  }
+  catch (CryptoPP::Exception& e) {
+    throw std::runtime_error(e.what());
+  }
+
+  std::cout << std::endl;
+  std::cout << "Crypto++   : Encrypted and verified data" << std::endl;
+
+  std::string enc;
+  CryptoPP::StringSource ssc(cipher, true, new CryptoPP::HexEncoder(
+    new CryptoPP::StringSink(enc), true, 2, ""));
+  std::cout << "Cipher     : " << enc << std::endl;
+  std::cout << "Tag        : " << enc.substr(testVectorCCM.datasize*2)
+    << std::endl;
+
   std::string plaintext;
 
   try {
@@ -156,7 +188,7 @@ int main(int argc, char* argv[])
   std::cout << std::endl;
   std::cout << "Crypto++   : Decrypted and verified data" << std::endl;
 
-  std::string enc;
+  enc.clear();
   CryptoPP::StringSource ssk(plaintext, true, new CryptoPP::HexEncoder(
     new CryptoPP::StringSink(enc), true, 2, ""));
   std::cout << "Plaintext  : " << enc << std::endl;
