@@ -23,7 +23,8 @@ typedef struct TestVector {
   size_t ivsize;
 } TestVector;
 
-/*
+// BLE ADV packet capture
+// Tag: 9F1F0F10
 static TestVector const testVectorCCM = {
     .name        = "AES-128 CCM BLE ADV",
     .key         = {0xE9, 0xEF, 0xAA, 0x68, 0x73, 0xF9, 0xF9, 0xC8,
@@ -39,27 +40,9 @@ static TestVector const testVectorCCM = {
     .tagsize     = 4,
     .ivsize      = 12
 };
-*/
-
-static TestVector const testVectorCCM = {
-    .name        = "AES-128 CCM BLE ADV TAG MOD",
-    .key         = {0xE9, 0xEF, 0xAA, 0x68, 0x73, 0xF9, 0xF9, 0xC8,
-                    0x7A, 0x5E, 0x75, 0xA5, 0xF8, 0x14, 0x80, 0x1C},
-    .plaintext   = {0x04, 0x10, 0x02, 0xD3, 0x00},
-    .ciphertext  = {0xDA, 0x61, 0x66, 0x77, 0xD5},
-    .authdata    = {0x11},
-    .iv          = {0x78, 0x16, 0x4E, 0x38, 0xC1, 0xA4, 0x5B, 0x05,
-                    0x3D, 0x2E, 0x00, 0x00},
-    .tag         = {0x9F, 0x1F, 0x0F, 0x10},
-    .authsize    = 1,
-    .datasize    = 5,
-    .tagsize     = 4,
-    .ivsize      = 12
-};
-
 
 // https://www.cryptopp.com/wiki/CCM_Mode
-
+// Tag: A6CBA251BB80E284
 /*
 static TestVector const testVectorCCM = {
     .name        = "Gladman's Test Vector 003",
@@ -85,6 +68,7 @@ static TestVector const testVectorCCM = {
 */
 
 // mbedtls/tests/suites/test_suite_cipher.ccm.data
+// Tag: FC24CF6A
 /*
 static TestVector const testVectorCCM = {
     .name        = "AES-128 CCM NIST #25",
