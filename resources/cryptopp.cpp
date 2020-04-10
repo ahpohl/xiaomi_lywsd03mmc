@@ -152,7 +152,8 @@ int main(int argc, char* argv[])
   std::string enc;
   CryptoPP::StringSource ssc(cipher, true, new CryptoPP::HexEncoder(
     new CryptoPP::StringSink(enc), true, 2, ""));
-  std::cout << "Cipher     : " << enc << std::endl;
+  std::cout << "Cipher     : " << enc.substr(0, testVectorCCM.datasize*2)
+    << std::endl;
   std::cout << "Tag        : " << enc.substr(testVectorCCM.datasize*2)
     << std::endl;
 
