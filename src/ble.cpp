@@ -187,6 +187,14 @@ void Ble::parsePacket(void)
     new CryptoPP::StringSink(key)));
   string iv = mac_source + m_packet.substr(pos+5, 2) 
     + m_packet.substr(pos+7, 1);
+
+  if (m_debug) {
+    string tmp;
+    CryptoPP::StringSource ssk(cipher, true, new CryptoPP::HexEncoder(
+      new CryptoPP::StringSink(tmp), true, 2, "")
+    );
+    cout << "Payload: " << tmp << endl;
+  }
   string plaintext = decryptPayload(cipher, key, iv);
   if (plaintext.length() != 5) {
     throw runtime_error("Plaintext invalid length, decryption failed.");
