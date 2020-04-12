@@ -113,7 +113,9 @@ int main(int argc, char* argv[])
 
   ret = mbedtls_ccm_self_test(1);
   if (ret) {
-    printf("AES-CCM self test failed.\n");
+    char err[100] = {0};
+    mbedtls_strerror(ret, err, 99);
+    fprintf(stderr, "MbedTLS    : %s\n", err);
     return 1;
   }
 
@@ -154,7 +156,7 @@ int main(int argc, char* argv[])
     testVectorCCM.iv,
     testVectorCCM.ivsize,
     testVectorCCM.authdata,
-    testVectorCCM.datasize,
+    testVectorCCM.authsize,
     testVectorCCM.plaintext,
     cipher,
     tag,
@@ -163,17 +165,13 @@ int main(int argc, char* argv[])
 
   printf("\n");
   if (ret) {
-    if (ret == MBEDTLS_ERR_CCM_AUTH_FAILED) {
-      fprintf(stderr, "MbedTLS    : Authenticated encryption failed.\n");
-    } else if (ret == MBEDTLS_ERR_CCM_BAD_INPUT) {
-        fprintf(stderr, "MbedTLS    : Bad input parameters to the function.\n");
-    } else if (ret == MBEDTLS_ERR_CCM_HW_ACCEL_FAILED) {
-        fprintf(stderr, "MbedTLS    : CCM hardware accelerator failed.\n");
-    }
+    char error[100] = {0};
+    mbedtls_strerror(ret, error, 99);
+    fprintf(stderr, "MbedTLS    : %s\n", error);
   } else if (memcmp( cipher, testVectorCCM.ciphertext, testVectorCCM.datasize) != 0) {
-      fprintf(stderr, "MbedTLS    : Encrypted ciphertext does not match.\n");
+      fprintf(stderr, "MbedTLS    : CCM - Encrypted ciphertext does not match.\n");
   } else {
-      printf("MbedTLS    : Authenticated encryption successful\n");
+      printf("MbedTLS    : CCM - Authenticated encryption passed.\n");
   }
 
   encoded = as_hex(cipher, testVectorCCM.datasize);
@@ -188,7 +186,7 @@ int main(int argc, char* argv[])
     testVectorCCM.iv,
     testVectorCCM.ivsize,
     testVectorCCM.authdata,
-    testVectorCCM.datasize,
+    testVectorCCM.authsize,
     testVectorCCM.ciphertext,
     plaintext,
     testVectorCCM.tag,
@@ -197,15 +195,15 @@ int main(int argc, char* argv[])
 
   printf("\n");
   if (ret) {
-    char err[200] = {0};
+    char err[100] = {0};
     if (ret) {
-      mbedtls_strerror(ret, err, 199);
+      mbedtls_strerror(ret, err, 99);
       fprintf(stderr, "MbedTLS    : %s\n", err);
     }
   } else if (memcmp( plaintext, testVectorCCM.plaintext, testVectorCCM.datasize) != 0) {
-	  fprintf(stderr, "MbedTLS    : Decrypted plaintext does not match.\n");
+      fprintf(stderr, "MbedTLS    : Decrypted plaintext does not match.\n");
   } else {
-    printf("MbedTLS    : Authenticated decryption successful\n");
+      printf("MbedTLS    : Authenticated decryption successful\n");
   }
 
   encoded = as_hex(plaintext, testVectorCCM.datasize);
