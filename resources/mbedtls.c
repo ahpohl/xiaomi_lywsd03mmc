@@ -26,7 +26,7 @@ typedef struct TestVector {
 } TestVector;
 
 // BLE ADV packet capture
-// Tag: 9F1F0F10 vs. 92982352
+/*
 static TestVector const testVectorCCM = {
     .name        = "AES-128 CCM BLE ADV",
     .key         = {0xE9, 0xEF, 0xAA, 0x68, 0x73, 0xF9, 0xF9, 0xC8,
@@ -37,6 +37,32 @@ static TestVector const testVectorCCM = {
     .iv          = {0x78, 0x16, 0x4E, 0x38, 0xC1, 0xA4, 0x5B, 0x05,
                     0x3D, 0x2E, 0x00, 0x00},
     .tag         = {0x92, 0x98, 0x23, 0x52},
+    .authsize    = 1,
+    .datasize    = 5,
+    .tagsize     = 4,
+    .ivsize      = 12
+};
+*/
+
+// Name      : AES-128 CCM BLE ADV
+// MAC       : A4C1384E1678
+// Packet    : 58585B057D78164E38C1A4B226937964390000350DA06A
+// Key       : E9EFAA6873F9F9C87A5E75A5F814801C
+// Iv        : A4C1384E16785B057D390000
+// Cipher    : B226937964
+// Plaintext : 0000000000
+// Tag       : 350DA06A
+
+static TestVector const testVectorCCM = {
+    .name        = "AES-128 CCM BLE ADV",
+    .key         = {0xE9, 0xEF, 0xAA, 0x68, 0x73, 0xF9, 0xF9, 0xC8,
+                    0x7A, 0x5E, 0x75, 0xA5, 0xF8, 0x14, 0x80, 0x1C},
+    .plaintext   = {0x06, 0x10, 0x02, 0xD2, 0x01},
+    .ciphertext  = {0xB2, 0x26, 0x93, 0x79, 0x64},
+    .authdata    = {0x11},
+    .iv          = {0x78, 0x16, 0x4E, 0x38, 0xC1, 0xA4, 0x5B, 0x05,
+                    0x7D, 0x39, 0x00, 0x00},
+    .tag         = {0x35, 0x0D, 0xA0, 0x6A},
     .authsize    = 1,
     .datasize    = 5,
     .tagsize     = 4,
