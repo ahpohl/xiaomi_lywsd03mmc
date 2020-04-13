@@ -5,6 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+#include <sstream>
 
 #include <cryptopp/cryptlib.h>
 #include <cryptopp/filters.h>
@@ -104,6 +105,18 @@ char* as_hex(unsigned char const* a, size_t a_size)
   return s;
 }
 
+std::string string_to_hex(uint8_t const* t_raw, size_t t_length)
+{
+  std::stringstream ss;
+  ss << std::hex << std::setfill('0') << std::uppercase;
+  for (size_t i = 0; t_length > i; ++i) {
+      ss << std::setw(2) << static_cast<unsigned int>(t_raw[i]);
+  }
+  return ss.str();
+}
+
+
+
 int main(int argc, char* argv[])
 {
   printf("Name       : %s\n", testVectorCCM.name);
@@ -123,6 +136,8 @@ int main(int argc, char* argv[])
   encoded = as_hex(testVectorCCM.tag, testVectorCCM.tagsize);
   printf("Tag        : %s\n", encoded);
   free(encoded);
+
+  std::cout << "Iv         : " << string_to_hex(testVectorCCM.iv, testVectorCCM.ivsize) << std::endl;
 
   std::string cipher;
 
