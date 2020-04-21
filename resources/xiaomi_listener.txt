@@ -1,0 +1,22 @@
+[22:00:22][VV][esp32_ble_tracker:283]: Parse Result:
+[22:00:22][VV][esp32_ble_tracker:300]:   Address: A4:C1:38:BC:B9:B2 (PUBLIC)
+[22:00:22][VV][esp32_ble_tracker:302]:   RSSI: -83
+[22:00:22][VV][esp32_ble_tracker:303]:   Name: 'LYWSD03MMC'
+[22:00:22][VV][esp32_ble_tracker:311]:   Ad Flag: 6
+[22:00:22][VV][esp32_ble_tracker:320]:   Service data:
+[22:00:22][VV][esp32_ble_tracker:321]:     UUID: FE:FE95
+[22:00:22][VV][esp32_ble_tracker:322]:     Data: 30.58.5B.05.77.B2.B9.BC.38.C1.A4.08 (12)
+[22:00:22][VV][esp32_ble_tracker:326]: Adv data: 02.01.06.0F.16.95.FE.30.58.5B.05.77.B2.B9.BC.38.C1.A4.08.0B.09.4C.59.57.53.44.30.33.4D.4D.43 (31)
+[22:00:22][VV][xiaomi_ble:263]: XiaomiListener::parse_device called.
+[22:00:22][VV][xiaomi_lywsd03mmc:021]: parse_device(): unknown MAC address.
+[22:00:22][VV][xiaomi_lywsd03mmc:021]: parse_device(): unknown MAC address.
+[22:00:22][VV][xiaomi_ble:110]: parse_xiaomi_header(): service data has no DATA flag.
+[22:00:22][VV][xiaomi_lywsd03mmc:027]: parse_device(): service data has no DATA flag.
+[22:00:22][VV][xiaomi_lywsd03mmc:021]: parse_device(): unknown MAC address.
+
+
+In XiaomiListener::parse_device() the call to xiaomi_ble::parse_xiaomi_header() has been disabled.
+The xiaomi_lywsd03mmc::parse_device() functions get called anyway, which in turn call 
+parse_xiaomi_header() and parse_xiaomi_message() and report_xiaomi_results()
+
+ESP_LOGVV(TAG, "parse_device(): payload decryption is currently not supported on this device.");

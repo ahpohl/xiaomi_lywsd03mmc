@@ -1,0 +1,42 @@
+[12:03:39][VV][esp32_ble_tracker:283]: Parse Result:
+[12:03:39][VV][esp32_ble_tracker:300]:   Address: A4:C1:38:8C:34:B7 (PUBLIC)
+[12:03:39][VV][esp32_ble_tracker:302]:   RSSI: -82
+[12:03:39][VV][esp32_ble_tracker:303]:   Name: 'LYWSD03MMC'
+[12:03:39][VV][esp32_ble_tracker:311]:   Ad Flag: 6
+[12:03:39][VV][esp32_ble_tracker:320]:   Service data:
+[12:03:39][VV][esp32_ble_tracker:321]:     UUID: FE:FE95
+[12:03:39][VV][esp32_ble_tracker:322]:     Data: 58.58.5B.05.17.B7.34.8C.38.C1.A4.EE.37.C3.AC.10.46.00.00.FC.27.F0.A5 (23)
+[12:03:39][VV][esp32_ble_tracker:325]: Adv data: 02.01.06.1A.16.95.FE.58.58.5B.05.17.B7.34.8C.38.C1.A4.EE.37.C3.AC.10.46.00.00.FC.27.F0.A5.0B.09.4C.59.57.53.44.30.33.4D.4D.43 (42)
+[12:03:39][VV][xiaomi_ble:118]: parse_xiaomi_service_data(): encrypted packet received.
+[12:03:39][VV][xiaomi_ble:218]: decrypt_xiaomi_payload(): authenticated decryption passed.
+[12:03:39][VV][xiaomi_ble:219]:   Plaintext : 04.10.02.E6.00 (5)
+[12:03:39][D][xiaomi_ble:247]: Got Xiaomi LYWSD03MMC (A4:C1:38:8C:34:B7):
+[12:03:39][D][xiaomi_ble:250]:   Temperature: 23.0°C
+[12:03:39][V][sensor:013]: 'Temperature Piano': Received new state 23.000000
+[12:03:39][D][sensor:092]: 'Temperature Piano': Sending state 23.00000 °C with 1 decimals of accuracy
+[12:03:39][VV][xiaomi_lywsd03mmc:021]: parse_device(): unknown MAC address.
+[12:03:39][VV][xiaomi_lywsd03mmc:021]: parse_device(): unknown MAC address.
+[12:03:39][VV][xiaomi_lywsd03mmc:021]: parse_device(): unknown MAC address.
+[12:03:39][VV][xiaomi_lywsd03mmc:021]: parse_device(): unknown MAC address.
+[12:03:39][VV][xiaomi_lywsd03mmc:021]: parse_device(): unknown MAC address.
+[12:03:39][VV][xiaomi_lywsd03mmc:021]: parse_device(): unknown MAC address.
+[12:03:39][VV][xiaomi_lywsd03mmc:021]: parse_device(): unknown MAC address.
+[12:03:39][VV][esp32_ble_tracker:283]: Parse Result:
+[12:03:39][VV][esp32_ble_tracker:300]:   Address: A4:C1:38:8C:34:B7 (PUBLIC)
+[12:03:39][VV][esp32_ble_tracker:302]:   RSSI: -85
+[12:03:39][VV][esp32_ble_tracker:303]:   Name: 'LYWSD03MMC'
+[12:03:39][VV][esp32_ble_tracker:311]:   Ad Flag: 6
+[12:03:39][VV][esp32_ble_tracker:320]:   Service data:
+[12:03:39][VV][esp32_ble_tracker:321]:     UUID: FE:FE95
+[12:03:39][VV][esp32_ble_tracker:322]:     Data: 58.58.5B.05.17.B7.34.8C.38.C1.A4.EE.37.C3.AC.10.46.00.00.FC.27.F0.A5 (23)
+[12:03:39][VV][esp32_ble_tracker:325]: Adv data: 02.01.06.1A.16.95.FE.58.58.5B.05.17.B7.34.8C.38.C1.A4.EE.37.C3.AC.10.46.00.00.FC.27.F0.A5.0B.09.4C.59.57.53.44.30.33.4D.4D.43 (42)
+[12:03:40][VV][xiaomi_ble:118]: parse_xiaomi_service_data(): encrypted packet received.
+[12:03:40][VV][xiaomi_lywsd03mmc:031]: parse_xiaomi_service_data(): duplicate data packet received (23).
+[12:03:40][VV][xiaomi_lywsd03mmc:032]:   Packet : 58.58.5B.05.17.B7.34.8C.38.C1.A4.EE.37.C3.AC.10.46.00.00.FC.27.F0.A5 (23)
+[12:03:40][VV][xiaomi_lywsd03mmc:021]: parse_device(): unknown MAC address.
+[12:03:40][VV][xiaomi_lywsd03mmc:021]: parse_device(): unknown MAC address.
+[12:03:40][VV][xiaomi_lywsd03mmc:021]: parse_device(): unknown MAC address.
+[12:03:40][VV][xiaomi_lywsd03mmc:021]: parse_device(): unknown MAC address.
+[12:03:40][VV][xiaomi_lywsd03mmc:021]: parse_device(): unknown MAC address.
+[12:03:40][VV][xiaomi_lywsd03mmc:021]: parse_device(): unknown MAC address.
+[12:03:40][VV][xiaomi_lywsd03mmc:021]: parse_device(): unknown MAC address.
