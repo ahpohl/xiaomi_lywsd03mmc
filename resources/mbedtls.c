@@ -7,6 +7,8 @@
 #include <mbedtls/cipher.h>
 #include <mbedtls/ccm.h>
 #include <mbedtls/error.h>
+#include <mbedtls/entropy.h>
+#include <mbedtls/ctr_drbg.h>
 
 #define MAX_PLAINTEXT_LEN 64
 #define AES_KEY_SIZE 128
@@ -237,6 +239,28 @@ int main(int argc, char* argv[])
   free(encoded);
 
   mbedtls_ccm_free(&ctx);
+
+  mbedtls_ctr_drbg_context ctr_drbg;
+  mbedtls_entropy_context entropy;
+  unsigned char key[16];
+
+  char *pers = "aes generate key";
+  mbedtls_entropy_init(&entropy);
+  mbedtls_ctr_drbg_init(&ctr_drbg);
+
+  if ((ret = mbedtls_ctr_drbg_seed( &ctr_drbg, mbedtls_entropy_func, &entropy,
+      (unsigned char *) pers, strlen(pers))) != 0)
+  {
+    printf("mbedtls_ctr_drbg_init() returned -0x%04x\n", -ret);
+    return 1;
+  }
+  if( ( ret = mbedtls_ctr_drbg_random( &ctr_drbg, key, 16 ) ) != 0 )
+  {
+    printf("mbedtls_ctr_drbg_random() returned -0x%04x\n", -ret);
+    return 1;
+  }
+
+  printf("\nAES key    : %s\n", as_hex(key, 16));
 
   return 0;
 }
