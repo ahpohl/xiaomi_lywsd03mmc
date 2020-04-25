@@ -1,10 +1,11 @@
 # Xiaomi LYWSD03MMC passive sensor readout
 This program is an effort to support the Xiaomi LYWSD03MMC temperature and humidity sensor in [ESPHome](https://esphome.io/). It uses the passive method to scan for the periodically emitted ADV BLE packages and automatically decrypts the payload.
 
-The ecryption keys have been obtained using the original [Xiaomi Home](https://play.google.com/store/apps/details?id=com.xiaomi.smarthome&hl=en) Android app and [Remote PCAP](https://play.google.com/store/apps/details?id=com.egorovandreyrm.pcapremote&hl=en). The Wireshark packet dump contains the clear text key if the root certificate has been setup correctly. By default the MITM certificate is installed in the user certificate store and not trusted. Recent Androids will not allow to use it unless it has been copied to the system certificate store. With Android USB debugging enabled, move the certificate to the system store:
+The ecryption keys have been obtained using the original [Xiaomi Home](https://play.google.com/store/apps/details?id=com.xiaomi.smarthome&hl=en) Android app and [Remote PCAP](https://play.google.com/store/apps/details?id=com.egorovandreyrm.pcapremote&hl=en). The Wireshark packet dump contains the clear text key if the root certificate has been setup correctly. By default the MITM certificate is installed in the user certificate store and not trusted. Recent Androids will not allow to use it unless it has been copied to the system certificate store. With Android USB debugging enabled, open a root shell and move the certificate to the system store:
 
 ```
 $ adb root
+$ adb shell
 # remount -o remount,rw /system
 # mv /data/misc/user/0/cacerts-added/0595058e.0 /system/etc/security/cacerts/
 # chown root.root /system/etc/security/cacerts/*
