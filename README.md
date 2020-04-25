@@ -1,7 +1,16 @@
 # Xiaomi LYWSD03MMC passive sensor readout
 This program is an effort to support the Xiaomi LYWSD03MMC temperature and humidity sensor in [ESPHome](https://esphome.io/). It uses the passive method to scan for the periodically emitted ADV BLE packages and automatically decrypts the payload.
 
-The ecryption keys have been obtained using the original [Xiaomi Home](https://play.google.com/store/apps/details?id=com.xiaomi.smarthome&hl=en) Android app and [Remote PCAP](https://play.google.com/store/apps/details?id=com.egorovandreyrm.pcapremote&hl=en). The Wireshark packet dump contains the clear text key if the root certificate has been setup correctly ([tutorial](https://egorovandreyrm.com/pcap-remote-tutorial/)). Here is the relevant part from the Wireshark packet dump:
+The ecryption keys have been obtained using the original [Xiaomi Home](https://play.google.com/store/apps/details?id=com.xiaomi.smarthome&hl=en) Android app and [Remote PCAP](https://play.google.com/store/apps/details?id=com.egorovandreyrm.pcapremote&hl=en). The Wireshark packet dump contains the clear text key if the root certificate has been setup correctly. By default the MITM certificate is not trusted and installed in the user certificate store. Recent Androids will not allow to use it so it has to be copied to the system certificate store first. With Android USB debugging enabled, you can get a root shell with adb:
+
+```
+$ adb root
+# remount -o remount,rw /system
+# mv /data/misc/user/0/cacerts-added/0595058e.0 /system/etc/security/cacerts/
+chown root.root /system/etc/security/cacerts/*
+
+```
+Now the certificate is installed in the system store and automatically set to trusted. You can now move on to collect the packet dump remotely with ssldump ([tutorial](https://egorovandreyrm.com/pcap-remote-tutorial/)). Here is the relevant part from the Wireshark packet dump:
 
 ```
 packet: POST /app/device/bltbind
