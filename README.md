@@ -10,7 +10,7 @@ $ adb root
 # chown root.root /system/etc/security/cacerts/*
 
 ```
-Now the packet dump can be collected with PCAP, ssldump and Wirehark ([tutorial](https://egorovandreyrm.com/pcap-remote-tutorial/)). Here is the relevant part from the Wireshark packet dump:
+Now the packet dump can be collected with PCAP Remote, sshdump and Wireshark ([tutorial](https://egorovandreyrm.com/pcap-remote-tutorial/)). Here is the relevant part from the Wireshark packet dump:
 
 ```
 packet: POST /app/device/bltbind
