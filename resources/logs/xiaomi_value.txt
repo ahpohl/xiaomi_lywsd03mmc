@@ -1,0 +1,30 @@
+def parse_xiaomi_value(hexvalue, typecode):
+    """Convert value depending on its type."""
+    vlength = len(hexvalue)
+    if vlength == 4:
+        if typecode == b'\x0D\x10':
+            (temp, humi) = TH_STRUCT.unpack(hexvalue)
+            return {"temperature": temp / 10, "humidity": humi / 10}
+    if vlength == 2:
+        if typecode == b'\x06\x10':
+            (humi,) = H_STRUCT.unpack(hexvalue)
+            return {"humidity": humi / 10}
+        if typecode == b'\x04\x10':
+            (temp,) = T_STRUCT.unpack(hexvalue)
+            return {"temperature": temp / 10}
+        if typecode == b'\x09\x10':
+            (cond,) = CND_STRUCT.unpack(hexvalue)
+            return {"conductivity": cond}
+        if typecode == b'\x10\x10':
+            (fmdh,) = FMDH_STRUCT.unpack(hexvalue)
+            return {"formaldehyde": fmdh / 100}
+    if vlength == 1:
+        if typecode == b'\x0A\x10':
+            return {"battery": hexvalue[0]}
+        if typecode == b'\x08\x10':
+            return {"moisture": hexvalue[0]}
+    if vlength == 3:
+        if typecode == b'\x07\x10':
+            (illum,) = ILL_STRUCT.unpack(hexvalue + b'\x00')
+            return {"illuminance": illum}
+    return None

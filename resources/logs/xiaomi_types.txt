@@ -1,0 +1,31 @@
+  # Sensor type indexes dictionary
+  # Temperature, Humidity, Moisture, Conductivity, Illuminance, Formaldehyde, Battery
+  # Measurement type T  H  M  C  I  F  B   9 - no measurement
+  MMTS_DICT = {
+      'HHCCJCY01' : [0, 9, 1, 2, 3, 9, 9],
+      'GCLS002'   : [0, 9, 1, 2, 3, 9, 9],
+      'HHCCPOT002': [9, 9, 0, 1, 9, 9, 9],
+      'LYWSDCGQ'  : [0, 1, 9, 9, 9, 9, 2],
+      'LYWSD02'   : [0, 1, 9, 9, 9, 9, 9],
+      'CGG1'      : [0, 1, 9, 9, 9, 9, 2],
+      'LYWSD03MMC': [0, 1, 9, 9, 9, 9, 2],
+      'CGD1'      : [0, 1, 9, 9, 9, 9, 2],
+      'JQJCY01YM' : [0, 1, 9, 9, 9, 2, 3]
+  }
+    XIAOMI_TYPE_DICT = {
+      b'\x98\x00': "HHCCJCY01",
+      b'\xAA\x01': "LYWSDCGQ",
+      b'\x5B\x04': "LYWSD02",
+      b'\x47\x03': "CGG1",
+      b'\x5D\x01': "HHCCPOT002",
+      b'\xBC\x03': "GCLS002",
+      b'\x5B\x05': "LYWSD03MMC",
+      b'\x76\x05': "CGD1",
+      b'\xDF\x02': "JQJCY01YM"
+  }
+
+
+MUE4094RT : 40.30.DD.03.05.03.00.01.01 (9)
+WX08ZM    : 50.30.0a.04.69.34.07.b5.4a.a3.74.13.10.01.5f (15)
+HHCCJCY01 : 71.20.98.00.D9.01.B1.88.CA.EA.80.0D.09.10.02.4B.04 (17)
+

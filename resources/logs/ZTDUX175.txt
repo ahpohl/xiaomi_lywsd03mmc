@@ -1,0 +1,108 @@
+substitutions:
+  devicename: esp32_pietro
+  upper_devicename: ESP32 Pietro
+
+esphome:
+  name: $devicename
+  platform: ESP32
+  board: nodemcu-32s
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_pass
+  use_address: 192.168.1.203
+  manual_ip:
+    static_ip: 192.168.1.203
+    subnet: 255.255.255.0
+    gateway: 192.168.1.1
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: $upper_devicename "Fallback Hotspot"
+    password: "eTW6xVaAdsUv"
+
+captive_portal:
+
+esp32_ble_tracker:
+
+
+sensor:
+  - platform: xiaomi_lywsdcgq
+    mac_address: 58:2d:34:35:94:85
+    temperature:
+      name: "Łazienka Temperatura"
+      filters:
+        - exponential_moving_average:
+            alpha: 0.1
+            send_every: 1
+    humidity:
+      name: "Łazienka Wilgotność"
+    battery_level:
+      name: "Łazienka Bateria"
+  - platform: xiaomi_hhccjcy01
+    mac_address: 80:EA:CA:89:19:9F
+    temperature:
+      name: "Cytryna temperatura"
+    moisture:
+      name: "Cytryna wilgotność"
+    illuminance:
+      name: "Cytryna nasłonecznienie"
+    conductivity:
+      name: "Cytryna przewodność"
+  - platform: xiaomi_lywsd03mmc
+    mac_address: "A4:C1:38:B1:1D:9F"
+    bindkey: "4e36de30695f9dcc45764f1a6f1a000c"
+#    bindkey: "4E36DE30695F9DCC45764F1A6F1A000C"
+    temperature:
+      name: "Łazienka dzieci temperatura"
+    humidity:
+      name: "Łazienka dzieci wilgotność"
+    battery_level:
+      name: "Łazienka dzieci LYWSD03 bateria"
+  - platform: xiaomi_lywsd03mmc
+    mac_address: "A4:C1:38:D0:78:7C"
+    bindkey: "FCD77EA47FFDF9E7E5B22A4BA00EB75C"
+    temperature:
+      name: "Gościnny temperatura"
+    humidity:
+      name: "Gościnny wilgotność"
+    battery_level:
+      name: "Gościnny LYWSD03 bateria"
+  - platform: xiaomi_lywsd03mmc
+    mac_address: "A4:C1:38:2B:7E:17"
+    bindkey: "88DA62C905E569260DC80E5668EAACB5"
+    temperature:
+      name: "Tomek temperatura"
+    humidity:
+      name: "Tomek wilgotność"
+    battery_level:
+      name: "Tomek LYWSD03 bateria"
+  - platform: xiaomi_lywsd03mmc
+    mac_address: "A4:C1:38:C2:B9:1D"
+    bindkey: "DA4E8820AC80C466831B55A02C022139"
+    temperature:
+      name: "Sypialnia temperatura"
+    humidity:
+      name: "Sypialnia wilgotność"
+    battery_level:
+      name: "Sypialnia LYWSD03 bateria"
+
+  # - platform: xiaomi_hhccjcy01
+  #   mac_address: 80:EA:CA:89:19:46
+  #   temperature:
+  #     name: "Awokado temperatura"
+  #   moisture:
+  #     name: "Awokado wilgotność"
+  #   illuminance:
+  #     name: "Awokado nasłonecznienie"
+  #   conductivity:
+  #     name: "Awokado przewodność"
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+  password: !secret ota_passwd
