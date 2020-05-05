@@ -90,7 +90,7 @@ void setup() {
     testVectorCCM.iv,
     testVectorCCM.ivsize,
     testVectorCCM.authdata,
-    testVectorCCM.datasize,
+    testVectorCCM.authsize,
     testVectorCCM.ciphertext,
     plaintext,
     testVectorCCM.tag,
