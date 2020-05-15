@@ -1,0 +1,1784 @@
+[17:14:45][I][app:101]: ESPHome version 1.15.0-dev compiled on May 15 2020, 17:13:53
+[17:14:45][C][wifi:415]: WiFi:
+[17:14:45][C][wifi:283]:   SSID: 'vevs'
+[17:14:45][C][wifi:284]:   IP Address: 192.168.0.25
+[17:14:45][C][wifi:286]:   BSSID: 78:11:DC:52:ED:C2
+[17:14:45][C][wifi:287]:   Hostname: 'ble_tracker'
+[17:14:45][C][wifi:291]:   Signal strength: -45 dB b'[17:14:45]\x1b[0;35m[C][wifi:291]:   Signal strength: -45 dB \x1b[0;32m\xe2\x96\x82\xe2\x96\x84\xe2\x96\x86\xe2\x96\x88\x1b[0m\x1b[0m'
+[17:14:45][C][wifi:295]:   Channel: 8
+[17:14:45][C][wifi:296]:   Subnet: 255.255.255.0
+[17:14:45][C][wifi:297]:   Gateway: 192.168.0.1
+[17:14:45][C][wifi:298]:   DNS1: 192.168.0.1
+[17:14:45][C][wifi:299]:   DNS2: 0.0.0.0
+[17:14:45][C][logger:175]: Logger:
+[17:14:45][C][logger:176]:   Level: VERY_VERBOSE
+[17:14:45][C][logger:177]:   Log Baud Rate: 115200
+[17:14:45][C][logger:178]:   Hardware UART: UART0
+[17:14:45][C][esp32_ble_tracker:530]: BLE Tracker:
+[17:14:45][C][esp32_ble_tracker:531]:   Scan Duration: 1800 s
+[17:14:45][C][esp32_ble_tracker:532]:   Scan Interval: 320.0 ms
+[17:14:45][C][esp32_ble_tracker:533]:   Scan Window: 30.0 ms
+[17:14:45][C][esp32_ble_tracker:534]:   Scan Type: PASSIVE
+[17:14:45][C][restart:021]: Restart Switch 'ble_tracker_restart'
+[17:14:45][C][restart:021]:   Icon: 'mdi:restart'
+[17:14:45][C][ota:029]: Over-The-Air Updates:
+[17:14:45][C][ota:030]:   Address: ble_tracker.local:3232
+[17:14:45][C][api:095]: API Server:
+[17:14:45][C][api:096]:   Address: ble_tracker.local:6053
+[17:14:45][VV][esp32_ble_tracker:326]: Parse Result:
+[17:14:45][VV][esp32_ble_tracker:343]:   Address: DF:90:15:2F:A9:60 (PUBLIC)
+[17:14:45][VV][esp32_ble_tracker:345]:   RSSI: -77
+[17:14:45][VV][esp32_ble_tracker:346]:   Name: ''
+[17:14:45][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:14:45][VV][esp32_ble_tracker:360]:   Manufacturer data: 02.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.01.DF.90.15.2F.A9.60 (24)
+[17:14:45][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.FF.57.01.02.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.01.DF.90.15.2F.A9.60 (31)
+[17:14:45][VV][esp32_ble_tracker:326]: Parse Result:
+[17:14:45][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:14:45][VV][esp32_ble_tracker:345]:   RSSI: -71
+[17:14:45][VV][esp32_ble_tracker:346]:   Name: ''
+[17:14:45][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:14:45][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:14:45][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:14:45][D][esp32_ble_tracker:544]: Found device 50:EC:50:7C:1D:23 RSSI=-71
+[17:14:45][D][esp32_ble_tracker:565]:   Address Type: PUBLIC
+[17:14:47][VV][esp32_ble_tracker:326]: Parse Result:
+[17:14:47][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:14:47][VV][esp32_ble_tracker:345]:   RSSI: -85
+[17:14:47][VV][esp32_ble_tracker:346]:   Name: ''
+[17:14:47][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:14:48][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.E9.DC.53.28.DA.B8.EA.36.6D.DC.FA.0C.47.48.08.2C.01.88.0F.10.2C.FD.59 (24)
+[17:14:48][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.FF.57.01.00.E9.DC.53.28.DA.B8.EA.36.6D.DC.FA.0C.47.48.08.2C.01.88.0F.10.2C.FD.59 (31)
+[17:14:48][D][esp32_ble_tracker:544]: Found device 88:0F:10:2C:FD:59 RSSI=-85
+[17:14:48][D][esp32_ble_tracker:565]:   Address Type: PUBLIC
+[17:14:48][VV][esp32_ble_tracker:326]: Parse Result:
+[17:14:48][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:14:48][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:14:48][VV][esp32_ble_tracker:346]:   Name: ''
+[17:14:48][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:14:48][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:14:48][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:14:48][VV][esp32_ble_tracker:326]: Parse Result:
+[17:14:48][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:14:48][VV][esp32_ble_tracker:345]:   RSSI: -64
+[17:14:48][VV][esp32_ble_tracker:346]:   Name: ''
+[17:14:48][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:14:48][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:14:48][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:14:49][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:14:49][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:14:50][VV][esp32_ble_tracker:326]: Parse Result:
+[17:14:50][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:14:50][VV][esp32_ble_tracker:345]:   RSSI: -57
+[17:14:50][VV][esp32_ble_tracker:346]:   Name: ''
+[17:14:50][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:14:50][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:14:50][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:14:50][VV][esp32_ble_tracker:326]: Parse Result:
+[17:14:50][VV][esp32_ble_tracker:343]:   Address: F2:00:93:6A:0B:B3 (RANDOM)
+[17:14:50][VV][esp32_ble_tracker:345]:   RSSI: -72
+[17:14:50][VV][esp32_ble_tracker:346]:   Name: ''
+[17:14:50][VV][esp32_ble_tracker:354]:   Ad Flag: 4
+[17:14:50][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.88.FA.66.94.2B.E9.B7.75.CE.4B.EA.AE.04.AB.98.C4.01.F2.00.93.6A.0B.B3 (24)
+[17:14:50][VV][esp32_ble_tracker:368]: Adv data: 02.01.04.1B.FF.57.01.00.88.FA.66.94.2B.E9.B7.75.CE.4B.EA.AE.04.AB.98.C4.01.F2.00.93.6A.0B.B3 (31)
+[17:14:50][D][esp32_ble_tracker:544]: Found device F2:00:93:6A:0B:B3 RSSI=-72
+[17:14:50][D][esp32_ble_tracker:565]:   Address Type: RANDOM
+[17:14:50][VV][esp32_ble_tracker:326]: Parse Result:
+[17:14:50][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:14:50][VV][esp32_ble_tracker:345]:   RSSI: -83
+[17:14:50][VV][esp32_ble_tracker:346]:   Name: ''
+[17:14:50][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:14:50][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.E9.DC.53.28.DA.B8.EA.36.6D.DC.FA.0C.47.48.08.2C.01.88.0F.10.2C.FD.59 (24)
+[17:14:50][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.FF.57.01.00.E9.DC.53.28.DA.B8.EA.36.6D.DC.FA.0C.47.48.08.2C.01.88.0F.10.2C.FD.59 (31)
+[17:14:52][VV][esp32_ble_tracker:326]: Parse Result:
+[17:14:52][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:14:52][VV][esp32_ble_tracker:345]:   RSSI: -64
+[17:14:52][VV][esp32_ble_tracker:346]:   Name: ''
+[17:14:52][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:14:52][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:14:52][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:14:52][VV][esp32_ble_tracker:326]: Parse Result:
+[17:14:52][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:14:52][VV][esp32_ble_tracker:345]:   RSSI: -64
+[17:14:52][VV][esp32_ble_tracker:346]:   Name: ''
+[17:14:52][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:14:52][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:14:52][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:14:53][VV][esp32_ble_tracker:326]: Parse Result:
+[17:14:53][VV][esp32_ble_tracker:343]:   Address: A4:C1:38:AB:DD:EB (PUBLIC)
+[17:14:53][VV][esp32_ble_tracker:345]:   RSSI: -73
+[17:14:53][VV][esp32_ble_tracker:346]:   Name: ''
+[17:14:53][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:14:53][VV][esp32_ble_tracker:363]:   Service data:
+[17:14:53][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:14:53][VV][esp32_ble_tracker:365]:     Data: 30.58.5B.05.8A.EB.DD.AB.38.C1.A4.08 (12)
+[17:14:53][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.16.95.FE.30.58.5B.05.8A.EB.DD.AB.38.C1.A4.08 (19)
+[17:14:53][VV][esp32_ble_tracker:326]: Parse Result:
+[17:14:53][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:14:53][VV][esp32_ble_tracker:345]:   RSSI: -69
+[17:14:53][VV][esp32_ble_tracker:346]:   Name: ''
+[17:14:53][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:14:53][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:14:53][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:14:54][VV][esp32_ble_tracker:326]: Parse Result:
+[17:14:54][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:14:54][VV][esp32_ble_tracker:345]:   RSSI: -64
+[17:14:54][VV][esp32_ble_tracker:346]:   Name: ''
+[17:14:54][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:14:54][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:14:54][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:14:55][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:14:55][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:14:56][VV][esp32_ble_tracker:326]: Parse Result:
+[17:14:56][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:14:56][VV][esp32_ble_tracker:345]:   RSSI: -68
+[17:14:56][VV][esp32_ble_tracker:346]:   Name: ''
+[17:14:56][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:14:56][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:14:56][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:14:57][VV][esp32_ble_tracker:326]: Parse Result:
+[17:14:57][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:14:57][VV][esp32_ble_tracker:345]:   RSSI: -64
+[17:14:57][VV][esp32_ble_tracker:346]:   Name: ''
+[17:14:57][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:14:57][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:14:57][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:14:59][VV][esp32_ble_tracker:326]: Parse Result:
+[17:14:59][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:14:59][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:14:59][VV][esp32_ble_tracker:346]:   Name: ''
+[17:14:59][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:14:59][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:14:59][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:00][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:15:00][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:15:03][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:03][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:15:03][VV][esp32_ble_tracker:345]:   RSSI: -69
+[17:15:03][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:03][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:03][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:15:03][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:15:03][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:05][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:05][VV][esp32_ble_tracker:345]:   RSSI: -64
+[17:15:05][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:05][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:05][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:05][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:05][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:05][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:15:05][VV][esp32_ble_tracker:345]:   RSSI: -82
+[17:15:05][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:05][VV][esp32_ble_tracker:354]:   Ad Flag: 5
+[17:15:05][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.E9.DC.53.28.DA.B8.EA.36.6D.DC.FA.0C.47.48.08.2C.01.88.0F.10.2C.FD.59 (24)
+[17:15:05][VV][esp32_ble_tracker:368]: Adv data: 02.01.05.1B.FF.57.01.00.E9.DC.53.28.DA.B8.EA.36.6D.DC.FA.0C.47.48.08.2C.01.88.0F.10.2C.FD.59 (31)
+[17:15:05][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:05][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:15:05][VV][esp32_ble_tracker:345]:   RSSI: -83
+[17:15:05][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:05][VV][esp32_ble_tracker:354]:   Ad Flag: 5
+[17:15:05][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.E9.DC.53.28.DA.B8.EA.36.6D.DC.FA.0C.47.48.08.2C.01.88.0F.10.2C.FD.59 (24)
+[17:15:05][VV][esp32_ble_tracker:368]: Adv data: 02.01.05.1B.FF.57.01.00.E9.DC.53.28.DA.B8.EA.36.6D.DC.FA.0C.47.48.08.2C.01.88.0F.10.2C.FD.59 (31)
+[17:15:05][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:15:05][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:15:05][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:05][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:15:05][VV][esp32_ble_tracker:345]:   RSSI: -87
+[17:15:05][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:05][VV][esp32_ble_tracker:354]:   Ad Flag: 5
+[17:15:05][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.E9.DC.53.28.DA.B8.EA.36.6D.DC.FA.0C.47.48.08.2C.01.88.0F.10.2C.FD.59 (24)
+[17:15:05][VV][esp32_ble_tracker:368]: Adv data: 02.01.05.1B.FF.57.01.00.E9.DC.53.28.DA.B8.EA.36.6D.DC.FA.0C.47.48.08.2C.01.88.0F.10.2C.FD.59 (31)
+[17:15:05][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:05][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:15:05][VV][esp32_ble_tracker:345]:   RSSI: -84
+[17:15:05][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:05][VV][esp32_ble_tracker:354]:   Ad Flag: 5
+[17:15:05][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.E9.DC.53.28.DA.B8.EA.36.6D.DC.FA.0C.47.48.08.2C.01.88.0F.10.2C.FD.59 (24)
+[17:15:05][VV][esp32_ble_tracker:368]: Adv data: 02.01.05.1B.FF.57.01.00.E9.DC.53.28.DA.B8.EA.36.6D.DC.FA.0C.47.48.08.2C.01.88.0F.10.2C.FD.59 (31)
+[17:15:06][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:06][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:15:06][VV][esp32_ble_tracker:345]:   RSSI: -82
+[17:15:06][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:06][VV][esp32_ble_tracker:354]:   Ad Flag: 5
+[17:15:06][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.E9.DC.53.28.DA.B8.EA.36.6D.DC.FA.0C.47.48.08.2C.01.88.0F.10.2C.FD.59 (24)
+[17:15:06][VV][esp32_ble_tracker:368]: Adv data: 02.01.05.1B.FF.57.01.00.E9.DC.53.28.DA.B8.EA.36.6D.DC.FA.0C.47.48.08.2C.01.88.0F.10.2C.FD.59 (31)
+[17:15:06][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:06][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:15:06][VV][esp32_ble_tracker:345]:   RSSI: -89
+[17:15:06][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:06][VV][esp32_ble_tracker:354]:   Ad Flag: 5
+[17:15:06][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.E9.DC.53.28.DA.B8.EA.36.6D.DC.FA.0C.47.48.08.2C.01.88.0F.10.2C.FD.59 (24)
+[17:15:06][VV][esp32_ble_tracker:368]: Adv data: 02.01.05.1B.FF.57.01.00.E9.DC.53.28.DA.B8.EA.36.6D.DC.FA.0C.47.48.08.2C.01.88.0F.10.2C.FD.59 (31)
+[17:15:06][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:06][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:15:06][VV][esp32_ble_tracker:345]:   RSSI: -68
+[17:15:06][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:06][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:06][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:15:06][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:15:07][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:07][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:07][VV][esp32_ble_tracker:345]:   RSSI: -64
+[17:15:07][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:07][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:07][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:07][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:07][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:07][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:07][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:15:07][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:07][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:07][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:07][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:08][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:08][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:08][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:15:08][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:08][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:08][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:08][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:09][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:09][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:09][VV][esp32_ble_tracker:345]:   RSSI: -56
+[17:15:09][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:09][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:09][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:09][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:10][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:15:10][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:15:11][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:11][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:11][VV][esp32_ble_tracker:345]:   RSSI: -64
+[17:15:11][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:11][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:11][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:11][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:11][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:12][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:12][VV][esp32_ble_tracker:345]:   RSSI: -65
+[17:15:12][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:12][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:12][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:12][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:13][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:13][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:13][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:15:13][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:13][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:13][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:13][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:14][VV][api.service:192]: on_hello_request: HelloRequest {
+  client_info: 'Home Assistant 0.109.6'
+}
+[17:15:14][V][api.connection:583]: Hello from client: 'Home Assistant 0.109.6 (192.168.0.11)'
+[17:15:14][VV][api.service:012]: send_hello_response: HelloResponse {
+  api_version_major: 1
+  api_version_minor: 3
+  server_info: 'ble_tracker (esphome v1.15.0-dev)'
+}
+[17:15:14][VV][api.service:199]: on_connect_request: ConnectRequest {
+  password: ''
+}
+[17:15:14][D][api.connection:599]: Client 'Home Assistant 0.109.6 (192.168.0.11)' connected successfully!
+[17:15:14][VV][api.service:016]: send_connect_response: ConnectResponse {
+  invalid_password: NO
+}
+[17:15:14][VV][api.service:234]: on_device_info_request: DeviceInfoRequest {}
+[17:15:14][VV][api.service:036]: send_device_info_response: DeviceInfoResponse {
+  uses_password: NO
+  name: 'ble_tracker'
+  mac_address: '24:0A:C4:A5:D9:F0'
+  esphome_version: '1.15.0-dev'
+  compilation_time: 'May 15 2020, 17:13:53'
+  model: 'WEMOS LOLIN D32'
+  has_deep_sleep: NO
+}
+[17:15:14][VV][api.service:241]: on_list_entities_request: ListEntitiesRequest {}
+[17:15:14][VV][api.service:111]: send_list_entities_switch_response: ListEntitiesSwitchResponse {
+  object_id: 'ble_tracker_restart'
+  key: 1784281329
+  name: 'ble_tracker_restart'
+  unique_id: 'ble_trackerswitchble_tracker_restart'
+  icon: 'mdi:restart'
+  assumed_state: NO
+}
+[17:15:14][VV][api.service:040]: send_list_entities_done_response: ListEntitiesDoneResponse {}
+[17:15:14][VV][api.service:248]: on_subscribe_states_request: SubscribeStatesRequest {}
+[17:15:14][VV][api.service:298]: on_subscribe_homeassistant_services_request: SubscribeHomeassistantServicesRequest {}
+[17:15:14][VV][api.service:319]: on_subscribe_home_assistant_states_request: SubscribeHomeAssistantStatesRequest {}
+[17:15:14][VV][api.service:117]: send_switch_state_response: SwitchStateResponse {
+  key: 1784281329
+  state: NO
+}
+[17:15:15][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:15][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:15:15][VV][esp32_ble_tracker:345]:   RSSI: -69
+[17:15:15][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:15][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:15][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:15:15][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:15:15][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:15:15][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:15:16][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:16][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:15:16][VV][esp32_ble_tracker:345]:   RSSI: -69
+[17:15:16][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:16][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:16][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:15:16][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:15:16][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:16][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:16][VV][esp32_ble_tracker:345]:   RSSI: -64
+[17:15:16][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:16][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:16][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:16][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:16][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:16][VV][esp32_ble_tracker:343]:   Address: A4:C1:38:AB:DD:EB (PUBLIC)
+[17:15:16][VV][esp32_ble_tracker:345]:   RSSI: -66
+[17:15:16][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:16][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:16][VV][esp32_ble_tracker:363]:   Service data:
+[17:15:16][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:15:16][VV][esp32_ble_tracker:365]:     Data: 30.58.5B.05.8A.EB.DD.AB.38.C1.A4.08 (12)
+[17:15:16][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.16.95.FE.30.58.5B.05.8A.EB.DD.AB.38.C1.A4.08 (19)
+[17:15:19][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:20][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:20][VV][esp32_ble_tracker:345]:   RSSI: -61
+[17:15:20][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:20][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:20][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:20][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:20][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:15:20][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:15:21][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:21][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:21][VV][esp32_ble_tracker:345]:   RSSI: -75
+[17:15:21][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:21][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:21][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:21][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:21][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:21][VV][esp32_ble_tracker:343]:   Address: A4:C1:38:AB:DD:EB (PUBLIC)
+[17:15:21][VV][esp32_ble_tracker:345]:   RSSI: -73
+[17:15:21][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:21][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:21][VV][esp32_ble_tracker:363]:   Service data:
+[17:15:21][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:15:21][VV][esp32_ble_tracker:365]:     Data: 30.58.5B.05.8A.EB.DD.AB.38.C1.A4.08 (12)
+[17:15:22][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.16.95.FE.30.58.5B.05.8A.EB.DD.AB.38.C1.A4.08 (19)
+[17:15:23][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:23][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:23][VV][esp32_ble_tracker:345]:   RSSI: -55
+[17:15:23][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:23][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:23][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:23][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:24][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:24][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:24][VV][esp32_ble_tracker:345]:   RSSI: -61
+[17:15:24][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:24][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:24][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:24][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:25][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:15:25][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:15:26][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:26][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:26][VV][esp32_ble_tracker:345]:   RSSI: -57
+[17:15:26][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:26][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:26][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:26][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:27][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:27][VV][esp32_ble_tracker:343]:   Address: F2:00:93:6A:0B:B3 (RANDOM)
+[17:15:27][VV][esp32_ble_tracker:345]:   RSSI: -72
+[17:15:27][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:27][VV][esp32_ble_tracker:354]:   Ad Flag: 4
+[17:15:27][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.AA.3D.9F.AA.55.A5.57.0F.02.23.00.86.B6.EB.BC.9C.01.F2.00.93.6A.0B.B3 (24)
+[17:15:27][VV][esp32_ble_tracker:368]: Adv data: 02.01.04.1B.FF.57.01.00.AA.3D.9F.AA.55.A5.57.0F.02.23.00.86.B6.EB.BC.9C.01.F2.00.93.6A.0B.B3 (31)
+[17:15:27][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:27][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:15:27][VV][esp32_ble_tracker:345]:   RSSI: -68
+[17:15:27][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:27][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:27][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:15:27][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:15:29][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:29][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:15:29][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:15:29][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:29][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:29][VV][esp32_ble_tracker:363]:   Service data:
+[17:15:29][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:15:29][VV][esp32_ble_tracker:365]:     Data: 58.59.F6.07.40.02.32.CD.50.EC.50.AE.55.0A.29.FA.E2.67.00.00.91.C7.74.27 (24)
+[17:15:29][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.16.95.FE.58.59.F6.07.40.02.32.CD.50.EC.50.AE.55.0A.29.FA.E2.67.00.00.91.C7.74.27 (31)
+[17:15:29][D][esp32_ble_tracker:544]: Found device 50:EC:50:CD:32:02 RSSI=-63
+[17:15:29][D][esp32_ble_tracker:565]:   Address Type: PUBLIC
+[17:15:29][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:29][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:15:29][VV][esp32_ble_tracker:345]:   RSSI: -59
+[17:15:29][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:29][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:29][VV][esp32_ble_tracker:363]:   Service data:
+[17:15:29][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:15:29][VV][esp32_ble_tracker:365]:     Data: 58.59.F6.07.40.02.32.CD.50.EC.50.AE.55.0A.29.FA.E2.67.00.00.91.C7.74.27 (24)
+[17:15:29][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.16.95.FE.58.59.F6.07.40.02.32.CD.50.EC.50.AE.55.0A.29.FA.E2.67.00.00.91.C7.74.27 (31)
+[17:15:29][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:15:29][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:15:29][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:29][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:15:29][VV][esp32_ble_tracker:345]:   RSSI: -59
+[17:15:29][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:29][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:29][VV][esp32_ble_tracker:363]:   Service data:
+[17:15:29][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:15:29][VV][esp32_ble_tracker:365]:     Data: 58.59.F6.07.40.02.32.CD.50.EC.50.AE.55.0A.29.FA.E2.67.00.00.91.C7.74.27 (24)
+[17:15:29][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.16.95.FE.58.59.F6.07.40.02.32.CD.50.EC.50.AE.55.0A.29.FA.E2.67.00.00.91.C7.74.27 (31)
+[17:15:30][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:30][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:15:30][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:15:30][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:30][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:30][VV][esp32_ble_tracker:363]:   Service data:
+[17:15:30][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:15:30][VV][esp32_ble_tracker:365]:     Data: 58.59.F6.07.40.02.32.CD.50.EC.50.AE.55.0A.29.FA.E2.67.00.00.91.C7.74.27 (24)
+[17:15:30][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.16.95.FE.58.59.F6.07.40.02.32.CD.50.EC.50.AE.55.0A.29.FA.E2.67.00.00.91.C7.74.27 (31)
+[17:15:30][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:15:30][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:15:30][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:30][VV][esp32_ble_tracker:343]:   Address: F2:00:93:6A:0B:B3 (RANDOM)
+[17:15:30][VV][esp32_ble_tracker:345]:   RSSI: -77
+[17:15:30][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:30][VV][esp32_ble_tracker:354]:   Ad Flag: 4
+[17:15:30][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.AA.3D.9F.AA.55.A5.57.0F.02.23.00.86.B6.EB.BC.9C.01.F2.00.93.6A.0B.B3 (24)
+[17:15:30][VV][esp32_ble_tracker:368]: Adv data: 02.01.04.1B.FF.57.01.00.AA.3D.9F.AA.55.A5.57.0F.02.23.00.86.B6.EB.BC.9C.01.F2.00.93.6A.0B.B3 (31)
+[17:15:31][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:31][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:31][VV][esp32_ble_tracker:345]:   RSSI: -56
+[17:15:31][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:31][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:31][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:31][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:31][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:31][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:15:31][VV][esp32_ble_tracker:345]:   RSSI: -72
+[17:15:31][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:31][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:31][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:15:31][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:15:33][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:33][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:15:33][VV][esp32_ble_tracker:345]:   RSSI: -65
+[17:15:33][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:33][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:33][VV][esp32_ble_tracker:363]:   Service data:
+[17:15:33][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:15:33][VV][esp32_ble_tracker:365]:     Data: 48.59.F6.07.41.DD.F2.DC.A1.D9.C0.39.67.00.00.D0.35.F2.8F (19)
+[17:15:33][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.16.16.95.FE.48.59.F6.07.41.DD.F2.DC.A1.D9.C0.39.67.00.00.D0.35.F2.8F (26)
+[17:15:33][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:33][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:15:33][VV][esp32_ble_tracker:345]:   RSSI: -55
+[17:15:33][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:33][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:33][VV][esp32_ble_tracker:363]:   Service data:
+[17:15:33][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:15:33][VV][esp32_ble_tracker:365]:     Data: 48.59.F6.07.41.DD.F2.DC.A1.D9.C0.39.67.00.00.D0.35.F2.8F (19)
+[17:15:33][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.16.16.95.FE.48.59.F6.07.41.DD.F2.DC.A1.D9.C0.39.67.00.00.D0.35.F2.8F (26)
+[17:15:33][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:33][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:33][VV][esp32_ble_tracker:345]:   RSSI: -74
+[17:15:33][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:33][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:33][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:33][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:33][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:33][VV][esp32_ble_tracker:343]:   Address: DF:90:15:2F:A9:60 (PUBLIC)
+[17:15:33][VV][esp32_ble_tracker:345]:   RSSI: -69
+[17:15:33][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:33][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:33][VV][esp32_ble_tracker:360]:   Manufacturer data: 02.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.01.DF.90.15.2F.A9.60 (24)
+[17:15:33][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.FF.57.01.02.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.01.DF.90.15.2F.A9.60 (31)
+[17:15:33][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:33][VV][esp32_ble_tracker:343]:   Address: A4:C1:38:AB:DD:EB (PUBLIC)
+[17:15:33][VV][esp32_ble_tracker:345]:   RSSI: -64
+[17:15:33][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:33][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:33][VV][esp32_ble_tracker:363]:   Service data:
+[17:15:33][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:15:33][VV][esp32_ble_tracker:365]:     Data: 30.58.5B.05.8A.EB.DD.AB.38.C1.A4.08 (12)
+[17:15:33][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.16.95.FE.30.58.5B.05.8A.EB.DD.AB.38.C1.A4.08 (19)
+[17:15:34][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:35][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:35][VV][esp32_ble_tracker:345]:   RSSI: -57
+[17:15:35][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:35][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:35][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:35][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:35][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:35][VV][esp32_ble_tracker:343]:   Address: DF:90:15:2F:A9:60 (PUBLIC)
+[17:15:35][VV][esp32_ble_tracker:345]:   RSSI: -69
+[17:15:35][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:35][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:35][VV][esp32_ble_tracker:360]:   Manufacturer data: 02.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.01.DF.90.15.2F.A9.60 (24)
+[17:15:35][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.FF.57.01.02.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.01.DF.90.15.2F.A9.60 (31)
+[17:15:35][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:35][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:15:35][VV][esp32_ble_tracker:345]:   RSSI: -77
+[17:15:35][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:35][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:35][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:15:35][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:15:35][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:35][VV][esp32_ble_tracker:343]:   Address: DF:90:15:2F:A9:60 (PUBLIC)
+[17:15:35][VV][esp32_ble_tracker:345]:   RSSI: -71
+[17:15:35][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:35][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:35][VV][esp32_ble_tracker:360]:   Manufacturer data: 02.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.01.DF.90.15.2F.A9.60 (24)
+[17:15:35][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.FF.57.01.02.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.01.DF.90.15.2F.A9.60 (31)
+[17:15:35][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:15:35][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:15:36][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:36][VV][esp32_ble_tracker:343]:   Address: DF:90:15:2F:A9:60 (PUBLIC)
+[17:15:36][VV][esp32_ble_tracker:345]:   RSSI: -70
+[17:15:36][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:36][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:36][VV][esp32_ble_tracker:360]:   Manufacturer data: 02.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.01.DF.90.15.2F.A9.60 (24)
+[17:15:36][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.FF.57.01.02.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.01.DF.90.15.2F.A9.60 (31)
+[17:15:37][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:37][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:15:37][VV][esp32_ble_tracker:345]:   RSSI: -54
+[17:15:37][VV][esp32_ble_tracker:346]:   Name: 'MJYD2S'
+[17:15:37][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:37][VV][esp32_ble_tracker:363]:   Service data:
+[17:15:37][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:15:37][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.42.02.32.CD.50.EC.50 (11)
+[17:15:37][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0E.16.95.FE.10.59.F6.07.42.02.32.CD.50.EC.50.07.09.4D.4A.59.44.32.53 (26)
+[17:15:37][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:37][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:37][VV][esp32_ble_tracker:345]:   RSSI: -73
+[17:15:37][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:37][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:37][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:37][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:38][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:38][VV][esp32_ble_tracker:343]:   Address: DF:90:15:2F:A9:60 (PUBLIC)
+[17:15:38][VV][esp32_ble_tracker:345]:   RSSI: -70
+[17:15:38][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:38][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:38][VV][esp32_ble_tracker:360]:   Manufacturer data: 02.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.01.DF.90.15.2F.A9.60 (24)
+[17:15:38][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.FF.57.01.02.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.01.DF.90.15.2F.A9.60 (31)
+[17:15:38][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:38][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:15:38][VV][esp32_ble_tracker:345]:   RSSI: -87
+[17:15:38][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:38][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:38][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.F4.7D.65.1C.7A.D7.AA.A8.2B.DF.F3.9F.10.92.63.E6.01.88.0F.10.2C.FD.59 (24)
+[17:15:38][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.FF.57.01.00.F4.7D.65.1C.7A.D7.AA.A8.2B.DF.F3.9F.10.92.63.E6.01.88.0F.10.2C.FD.59 (31)
+[17:15:39][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:39][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:15:39][VV][esp32_ble_tracker:345]:   RSSI: -74
+[17:15:39][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:39][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:39][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:15:39][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:15:40][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:40][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:15:40][VV][esp32_ble_tracker:345]:   RSSI: -90
+[17:15:40][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:40][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:40][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.F4.7D.65.1C.7A.D7.AA.A8.2B.DF.F3.9F.10.92.63.E6.01.88.0F.10.2C.FD.59 (24)
+[17:15:40][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.FF.57.01.00.F4.7D.65.1C.7A.D7.AA.A8.2B.DF.F3.9F.10.92.63.E6.01.88.0F.10.2C.FD.59 (31)
+[17:15:41][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:15:41][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:15:41][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:41][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:41][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:15:41][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:41][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:41][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:41][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:41][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:41][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:15:41][VV][esp32_ble_tracker:345]:   RSSI: -82
+[17:15:41][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:41][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:41][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.F4.7D.65.1C.7A.D7.AA.A8.2B.DF.F3.9F.10.92.63.E6.01.88.0F.10.2C.FD.59 (24)
+[17:15:41][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.FF.57.01.00.F4.7D.65.1C.7A.D7.AA.A8.2B.DF.F3.9F.10.92.63.E6.01.88.0F.10.2C.FD.59 (31)
+[17:15:42][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:42][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:42][VV][esp32_ble_tracker:345]:   RSSI: -56
+[17:15:42][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:42][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:42][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:42][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:43][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:43][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:15:43][VV][esp32_ble_tracker:345]:   RSSI: -60
+[17:15:43][VV][esp32_ble_tracker:346]:   Name: 'MJYD2S'
+[17:15:43][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:43][VV][esp32_ble_tracker:363]:   Service data:
+[17:15:43][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:15:43][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.42.02.32.CD.50.EC.50 (11)
+[17:15:43][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0E.16.95.FE.10.59.F6.07.42.02.32.CD.50.EC.50.07.09.4D.4A.59.44.32.53 (26)
+[17:15:44][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:44][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:15:44][VV][esp32_ble_tracker:345]:   RSSI: -71
+[17:15:44][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:44][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:44][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:15:44][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:15:44][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:15:44][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:15:45][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:45][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:45][VV][esp32_ble_tracker:345]:   RSSI: -65
+[17:15:45][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:45][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:45][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:45][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:46][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:15:46][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:15:46][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:46][VV][esp32_ble_tracker:343]:   Address: A4:C1:38:06:CC:15 (PUBLIC)
+[17:15:46][VV][esp32_ble_tracker:345]:   RSSI: -62
+[17:15:46][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:46][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:46][VV][esp32_ble_tracker:363]:   Service data:
+[17:15:46][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:15:46][VV][esp32_ble_tracker:365]:     Data: 30.58.5B.05.E0.15.CC.06.38.C1.A4.08 (12)
+[17:15:46][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.16.95.FE.30.58.5B.05.E0.15.CC.06.38.C1.A4.08 (19)
+[17:15:46][D][esp32_ble_tracker:544]: Found device A4:C1:38:06:CC:15 RSSI=-62
+[17:15:46][D][esp32_ble_tracker:565]:   Address Type: PUBLIC
+[17:15:48][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:48][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:48][VV][esp32_ble_tracker:345]:   RSSI: -55
+[17:15:48][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:48][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:48][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:48][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:49][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:49][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:15:49][VV][esp32_ble_tracker:345]:   RSSI: -58
+[17:15:49][VV][esp32_ble_tracker:346]:   Name: 'MJYD2S'
+[17:15:49][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:49][VV][esp32_ble_tracker:363]:   Service data:
+[17:15:49][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:15:49][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.42.02.32.CD.50.EC.50 (11)
+[17:15:49][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0E.16.95.FE.10.59.F6.07.42.02.32.CD.50.EC.50.07.09.4D.4A.59.44.32.53 (26)
+[17:15:50][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:50][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:15:50][VV][esp32_ble_tracker:345]:   RSSI: -60
+[17:15:50][VV][esp32_ble_tracker:346]:   Name: 'MJYD2S'
+[17:15:50][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:50][VV][esp32_ble_tracker:363]:   Service data:
+[17:15:50][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:15:50][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.42.02.32.CD.50.EC.50 (11)
+[17:15:50][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0E.16.95.FE.10.59.F6.07.42.02.32.CD.50.EC.50.07.09.4D.4A.59.44.32.53 (26)
+[17:15:51][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:15:51][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:15:51][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:52][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:52][VV][esp32_ble_tracker:345]:   RSSI: -66
+[17:15:52][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:52][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:52][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:52][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:54][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:54][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:15:54][VV][esp32_ble_tracker:345]:   RSSI: -84
+[17:15:54][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:54][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:54][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:15:54][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:15:55][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:55][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:55][VV][esp32_ble_tracker:345]:   RSSI: -62
+[17:15:55][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:55][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:55][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:55][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:56][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:15:56][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:15:56][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:56][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:56][VV][esp32_ble_tracker:345]:   RSSI: -64
+[17:15:56][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:56][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:56][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:56][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:56][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:56][VV][esp32_ble_tracker:343]:   Address: F2:00:93:6A:0B:B3 (RANDOM)
+[17:15:56][VV][esp32_ble_tracker:345]:   RSSI: -73
+[17:15:56][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:56][VV][esp32_ble_tracker:354]:   Ad Flag: 4
+[17:15:56][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.AA.3D.9F.AA.55.A5.57.0F.02.23.00.86.B6.EB.BC.9C.01.F2.00.93.6A.0B.B3 (24)
+[17:15:56][VV][esp32_ble_tracker:368]: Adv data: 02.01.04.1B.FF.57.01.00.AA.3D.9F.AA.55.A5.57.0F.02.23.00.86.B6.EB.BC.9C.01.F2.00.93.6A.0B.B3 (31)
+[17:15:58][VV][esp32_ble_tracker:326]: Parse Result:
+[17:15:58][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:15:58][VV][esp32_ble_tracker:345]:   RSSI: -57
+[17:15:58][VV][esp32_ble_tracker:346]:   Name: ''
+[17:15:58][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:15:58][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:15:58][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:15:59][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:15:59][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:16:00][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:00][VV][esp32_ble_tracker:343]:   Address: A4:C1:38:06:CC:15 (PUBLIC)
+[17:16:00][VV][esp32_ble_tracker:345]:   RSSI: -52
+[17:16:00][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:00][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:00][VV][esp32_ble_tracker:363]:   Service data:
+[17:16:00][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:16:00][VV][esp32_ble_tracker:365]:     Data: 30.58.5B.05.E0.15.CC.06.38.C1.A4.08 (12)
+[17:16:00][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.16.95.FE.30.58.5B.05.E0.15.CC.06.38.C1.A4.08 (19)
+[17:16:00][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:00][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:00][VV][esp32_ble_tracker:345]:   RSSI: -65
+[17:16:00][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:00][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:00][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:00][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:01][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:01][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:16:01][VV][esp32_ble_tracker:345]:   RSSI: -84
+[17:16:01][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:01][VV][esp32_ble_tracker:354]:   Ad Flag: 5
+[17:16:01][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.F4.7D.65.1C.7A.D7.AA.A8.2B.DF.F3.9F.10.92.63.E6.01.88.0F.10.2C.FD.59 (24)
+[17:16:01][VV][esp32_ble_tracker:368]: Adv data: 02.01.05.1B.FF.57.01.00.F4.7D.65.1C.7A.D7.AA.A8.2B.DF.F3.9F.10.92.63.E6.01.88.0F.10.2C.FD.59 (31)
+[17:16:01][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:16:01][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:16:02][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:02][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:16:02][VV][esp32_ble_tracker:345]:   RSSI: -73
+[17:16:02][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:02][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:02][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:16:02][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:16:02][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:02][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:16:02][VV][esp32_ble_tracker:345]:   RSSI: -58
+[17:16:02][VV][esp32_ble_tracker:346]:   Name: 'MJYD2S'
+[17:16:02][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:02][VV][esp32_ble_tracker:363]:   Service data:
+[17:16:02][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:16:02][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.42.02.32.CD.50.EC.50 (11)
+[17:16:02][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0E.16.95.FE.10.59.F6.07.42.02.32.CD.50.EC.50.07.09.4D.4A.59.44.32.53 (26)
+[17:16:02][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:02][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:16:02][VV][esp32_ble_tracker:345]:   RSSI: -61
+[17:16:02][VV][esp32_ble_tracker:346]:   Name: 'MJYD2S'
+[17:16:02][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:02][VV][esp32_ble_tracker:363]:   Service data:
+[17:16:02][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:16:02][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.42.02.32.CD.50.EC.50 (11)
+[17:16:02][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0E.16.95.FE.10.59.F6.07.42.02.32.CD.50.EC.50.07.09.4D.4A.59.44.32.53 (26)
+[17:16:03][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:03][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:16:03][VV][esp32_ble_tracker:345]:   RSSI: -74
+[17:16:03][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:03][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:03][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:16:03][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:16:04][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:04][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:04][VV][esp32_ble_tracker:345]:   RSSI: -62
+[17:16:04][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:04][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:04][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:04][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:06][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:16:06][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:16:07][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:07][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:07][VV][esp32_ble_tracker:345]:   RSSI: -57
+[17:16:07][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:07][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:07][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:07][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:07][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:07][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:16:07][VV][esp32_ble_tracker:345]:   RSSI: -88
+[17:16:07][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:07][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:07][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:16:07][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:16:09][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:09][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:09][VV][esp32_ble_tracker:345]:   RSSI: -64
+[17:16:09][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:09][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:09][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:09][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:09][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:09][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:09][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:16:09][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:09][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:09][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:09][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:10][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:10][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:16:10][VV][esp32_ble_tracker:345]:   RSSI: -69
+[17:16:10][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:10][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:10][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:16:10][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:16:11][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:16:11][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:16:13][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:13][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:16:13][VV][esp32_ble_tracker:345]:   RSSI: -71
+[17:16:13][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:13][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:13][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:16:13][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:16:14][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:14][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:14][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:16:14][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:14][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:14][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:14][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:14][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:14][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:16:14][VV][esp32_ble_tracker:345]:   RSSI: -71
+[17:16:14][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:14][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:14][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:16:14][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:16:14][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:16:14][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:16:15][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:15][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:16:15][VV][esp32_ble_tracker:345]:   RSSI: -62
+[17:16:15][VV][esp32_ble_tracker:346]:   Name: 'MJYD2S'
+[17:16:15][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:15][VV][esp32_ble_tracker:363]:   Service data:
+[17:16:15][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:16:15][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.42.02.32.CD.50.EC.50 (11)
+[17:16:15][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0E.16.95.FE.10.59.F6.07.42.02.32.CD.50.EC.50.07.09.4D.4A.59.44.32.53 (26)
+[17:16:15][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:15][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:16:15][VV][esp32_ble_tracker:345]:   RSSI: -58
+[17:16:15][VV][esp32_ble_tracker:346]:   Name: 'MJYD2S'
+[17:16:15][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:15][VV][esp32_ble_tracker:363]:   Service data:
+[17:16:15][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:16:15][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.42.02.32.CD.50.EC.50 (11)
+[17:16:15][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0E.16.95.FE.10.59.F6.07.42.02.32.CD.50.EC.50.07.09.4D.4A.59.44.32.53 (26)
+[17:16:16][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:16][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:16:16][VV][esp32_ble_tracker:345]:   RSSI: -84
+[17:16:16][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:16][VV][esp32_ble_tracker:354]:   Ad Flag: 5
+[17:16:16][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.33.9D.F9.21.88.34.85.53.C0.0F.54.0D.F4.3B.25.4D.01.88.0F.10.2C.FD.59 (24)
+[17:16:16][VV][esp32_ble_tracker:368]: Adv data: 02.01.05.1B.FF.57.01.00.33.9D.F9.21.88.34.85.53.C0.0F.54.0D.F4.3B.25.4D.01.88.0F.10.2C.FD.59 (31)
+[17:16:17][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:16:17][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:16:17][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:17][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:16:17][VV][esp32_ble_tracker:345]:   RSSI: -82
+[17:16:17][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:17][VV][esp32_ble_tracker:354]:   Ad Flag: 5
+[17:16:17][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.33.9D.F9.21.88.34.85.53.C0.0F.54.0D.F4.3B.25.4D.01.88.0F.10.2C.FD.59 (24)
+[17:16:17][VV][esp32_ble_tracker:368]: Adv data: 02.01.05.1B.FF.57.01.00.33.9D.F9.21.88.34.85.53.C0.0F.54.0D.F4.3B.25.4D.01.88.0F.10.2C.FD.59 (31)
+[17:16:17][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:17][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:16:17][VV][esp32_ble_tracker:345]:   RSSI: -89
+[17:16:17][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:17][VV][esp32_ble_tracker:354]:   Ad Flag: 5
+[17:16:17][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.33.9D.F9.21.88.34.85.53.C0.0F.54.0D.F4.3B.25.4D.01.88.0F.10.2C.FD.59 (24)
+[17:16:17][VV][esp32_ble_tracker:368]: Adv data: 02.01.05.1B.FF.57.01.00.33.9D.F9.21.88.34.85.53.C0.0F.54.0D.F4.3B.25.4D.01.88.0F.10.2C.FD.59 (31)
+[17:16:17][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:17][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:16:17][VV][esp32_ble_tracker:345]:   RSSI: -84
+[17:16:17][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:17][VV][esp32_ble_tracker:354]:   Ad Flag: 5
+[17:16:17][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.33.9D.F9.21.88.34.85.53.C0.0F.54.0D.F4.3B.25.4D.01.88.0F.10.2C.FD.59 (24)
+[17:16:17][VV][esp32_ble_tracker:368]: Adv data: 02.01.05.1B.FF.57.01.00.33.9D.F9.21.88.34.85.53.C0.0F.54.0D.F4.3B.25.4D.01.88.0F.10.2C.FD.59 (31)
+[17:16:18][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:18][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:18][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:16:18][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:18][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:18][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:18][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:18][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:18][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:16:18][VV][esp32_ble_tracker:345]:   RSSI: -83
+[17:16:18][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:18][VV][esp32_ble_tracker:354]:   Ad Flag: 5
+[17:16:18][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.33.9D.F9.21.88.34.85.53.C0.0F.54.0D.F4.3B.25.4D.01.88.0F.10.2C.FD.59 (24)
+[17:16:18][VV][esp32_ble_tracker:368]: Adv data: 02.01.05.1B.FF.57.01.00.33.9D.F9.21.88.34.85.53.C0.0F.54.0D.F4.3B.25.4D.01.88.0F.10.2C.FD.59 (31)
+[17:16:18][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:18][VV][esp32_ble_tracker:343]:   Address: F2:00:93:6A:0B:B3 (RANDOM)
+[17:16:18][VV][esp32_ble_tracker:345]:   RSSI: -73
+[17:16:18][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:18][VV][esp32_ble_tracker:354]:   Ad Flag: 4
+[17:16:18][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.92.9E.61.B0.54.7C.F8.B4.00.D3.11.43.98.AF.A8.C9.01.F2.00.93.6A.0B.B3 (24)
+[17:16:18][VV][esp32_ble_tracker:368]: Adv data: 02.01.04.1B.FF.57.01.00.92.9E.61.B0.54.7C.F8.B4.00.D3.11.43.98.AF.A8.C9.01.F2.00.93.6A.0B.B3 (31)
+[17:16:18][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:18][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:16:18][VV][esp32_ble_tracker:345]:   RSSI: -89
+[17:16:18][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:18][VV][esp32_ble_tracker:354]:   Ad Flag: 5
+[17:16:18][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.33.9D.F9.21.88.34.85.53.C0.0F.54.0D.F4.3B.25.4D.01.88.0F.10.2C.FD.59 (24)
+[17:16:18][VV][esp32_ble_tracker:368]: Adv data: 02.01.05.1B.FF.57.01.00.33.9D.F9.21.88.34.85.53.C0.0F.54.0D.F4.3B.25.4D.01.88.0F.10.2C.FD.59 (31)
+[17:16:19][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:19][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:16:19][VV][esp32_ble_tracker:345]:   RSSI: -89
+[17:16:19][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:19][VV][esp32_ble_tracker:354]:   Ad Flag: 5
+[17:16:19][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.33.9D.F9.21.88.34.85.53.C0.0F.54.0D.F4.3B.25.4D.01.88.0F.10.2C.FD.59 (24)
+[17:16:19][VV][esp32_ble_tracker:368]: Adv data: 02.01.05.1B.FF.57.01.00.33.9D.F9.21.88.34.85.53.C0.0F.54.0D.F4.3B.25.4D.01.88.0F.10.2C.FD.59 (31)
+[17:16:20][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:20][VV][esp32_ble_tracker:343]:   Address: A4:C1:38:AB:DD:EB (PUBLIC)
+[17:16:20][VV][esp32_ble_tracker:345]:   RSSI: -66
+[17:16:20][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:20][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:20][VV][esp32_ble_tracker:363]:   Service data:
+[17:16:20][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:16:20][VV][esp32_ble_tracker:365]:     Data: 30.58.5B.05.8A.EB.DD.AB.38.C1.A4.08 (12)
+[17:16:20][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.16.95.FE.30.58.5B.05.8A.EB.DD.AB.38.C1.A4.08 (19)
+[17:16:22][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:22][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:22][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:16:22][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:22][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:22][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:22][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:22][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:16:22][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:16:23][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:23][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:16:23][VV][esp32_ble_tracker:345]:   RSSI: -70
+[17:16:23][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:23][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:23][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:16:23][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:16:23][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:24][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:24][VV][esp32_ble_tracker:345]:   RSSI: -62
+[17:16:24][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:24][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:24][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:24][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:26][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:26][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:16:26][VV][esp32_ble_tracker:345]:   RSSI: -71
+[17:16:26][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:26][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:26][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:16:26][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:16:27][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:27][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:27][VV][esp32_ble_tracker:345]:   RSSI: -56
+[17:16:27][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:27][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:27][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:27][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:27][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:16:27][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:16:28][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:28][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:16:28][VV][esp32_ble_tracker:345]:   RSSI: -58
+[17:16:28][VV][esp32_ble_tracker:346]:   Name: 'MJYD2S'
+[17:16:28][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:28][VV][esp32_ble_tracker:363]:   Service data:
+[17:16:28][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:16:28][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.42.02.32.CD.50.EC.50 (11)
+[17:16:28][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0E.16.95.FE.10.59.F6.07.42.02.32.CD.50.EC.50.07.09.4D.4A.59.44.32.53 (26)
+[17:16:28][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:28][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:16:28][VV][esp32_ble_tracker:345]:   RSSI: -60
+[17:16:28][VV][esp32_ble_tracker:346]:   Name: 'MJYD2S'
+[17:16:28][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:28][VV][esp32_ble_tracker:363]:   Service data:
+[17:16:28][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:16:28][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.42.02.32.CD.50.EC.50 (11)
+[17:16:28][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0E.16.95.FE.10.59.F6.07.42.02.32.CD.50.EC.50.07.09.4D.4A.59.44.32.53 (26)
+[17:16:28][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:28][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:28][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:16:28][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:28][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:28][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:28][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:29][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:16:29][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:16:30][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:30][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:30][VV][esp32_ble_tracker:345]:   RSSI: -62
+[17:16:30][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:30][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:30][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:30][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:31][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:31][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:31][VV][esp32_ble_tracker:345]:   RSSI: -69
+[17:16:31][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:31][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:31][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:31][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:31][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:31][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:31][VV][esp32_ble_tracker:345]:   RSSI: -62
+[17:16:31][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:31][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:31][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:31][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:32][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:16:32][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:16:33][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:33][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:33][VV][esp32_ble_tracker:345]:   RSSI: -62
+[17:16:33][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:33][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:33][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:33][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:33][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:33][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:33][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:16:33][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:33][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:33][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:33][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:36][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:36][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:16:36][VV][esp32_ble_tracker:345]:   RSSI: -55
+[17:16:36][VV][esp32_ble_tracker:346]:   Name: 'MJYD2S'
+[17:16:36][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:36][VV][esp32_ble_tracker:363]:   Service data:
+[17:16:36][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:16:36][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.42.02.32.CD.50.EC.50 (11)
+[17:16:36][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0E.16.95.FE.10.59.F6.07.42.02.32.CD.50.EC.50.07.09.4D.4A.59.44.32.53 (26)
+[17:16:36][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:36][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:16:36][VV][esp32_ble_tracker:345]:   RSSI: -70
+[17:16:36][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:36][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:36][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:16:36][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:16:36][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:36][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:36][VV][esp32_ble_tracker:345]:   RSSI: -57
+[17:16:36][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:36][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:36][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:36][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:37][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:16:37][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:16:37][I][ota:046]: Boot seems successful, resetting boot loop counter.
+[17:16:37][VV][preferences:051]: SAVE 0: 0=0x00000000 1=0x0DEFE4E3 (Type=233825507, CRC=0x0DEFE4E3)
+[17:16:38][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:38][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:38][VV][esp32_ble_tracker:345]:   RSSI: -62
+[17:16:38][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:38][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:38][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:38][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:38][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:38][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:16:38][VV][esp32_ble_tracker:345]:   RSSI: -72
+[17:16:38][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:38][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:38][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:16:38][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:16:40][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:40][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:16:40][VV][esp32_ble_tracker:345]:   RSSI: -55
+[17:16:40][VV][esp32_ble_tracker:346]:   Name: 'MJYD2S'
+[17:16:40][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:40][VV][esp32_ble_tracker:363]:   Service data:
+[17:16:40][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:16:40][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.42.02.32.CD.50.EC.50 (11)
+[17:16:40][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0E.16.95.FE.10.59.F6.07.42.02.32.CD.50.EC.50.07.09.4D.4A.59.44.32.53 (26)
+[17:16:40][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:40][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:16:40][VV][esp32_ble_tracker:345]:   RSSI: -84
+[17:16:40][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:40][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:40][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.33.9D.F9.21.88.34.85.53.C0.0F.54.0D.F4.3B.25.4D.01.88.0F.10.2C.FD.59 (24)
+[17:16:40][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.FF.57.01.00.33.9D.F9.21.88.34.85.53.C0.0F.54.0D.F4.3B.25.4D.01.88.0F.10.2C.FD.59 (31)
+[17:16:40][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:40][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:16:41][VV][esp32_ble_tracker:345]:   RSSI: -60
+[17:16:41][VV][esp32_ble_tracker:346]:   Name: 'MJYD2S'
+[17:16:41][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:41][VV][esp32_ble_tracker:363]:   Service data:
+[17:16:41][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:16:41][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.42.02.32.CD.50.EC.50 (11)
+[17:16:41][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0E.16.95.FE.10.59.F6.07.42.02.32.CD.50.EC.50.07.09.4D.4A.59.44.32.53 (26)
+[17:16:41][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:41][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:41][VV][esp32_ble_tracker:345]:   RSSI: -62
+[17:16:41][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:41][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:41][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:41][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:42][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:16:42][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:16:43][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:43][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:43][VV][esp32_ble_tracker:345]:   RSSI: -62
+[17:16:43][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:43][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:43][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:43][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:43][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:43][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:16:43][VV][esp32_ble_tracker:345]:   RSSI: -90
+[17:16:43][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:43][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:43][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.33.9D.F9.21.88.34.85.53.C0.0F.54.0D.F4.3B.25.4D.01.88.0F.10.2C.FD.59 (24)
+[17:16:43][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.FF.57.01.00.33.9D.F9.21.88.34.85.53.C0.0F.54.0D.F4.3B.25.4D.01.88.0F.10.2C.FD.59 (31)
+[17:16:44][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:16:45][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:16:46][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:46][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:16:46][VV][esp32_ble_tracker:345]:   RSSI: -69
+[17:16:46][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:46][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:46][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:16:46][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:16:47][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:16:47][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:16:47][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:48][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:48][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:16:48][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:48][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:48][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:48][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:48][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:48][VV][esp32_ble_tracker:343]:   Address: A4:C1:38:06:CC:15 (PUBLIC)
+[17:16:48][VV][esp32_ble_tracker:345]:   RSSI: -61
+[17:16:48][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:48][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:48][VV][esp32_ble_tracker:363]:   Service data:
+[17:16:48][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:16:48][VV][esp32_ble_tracker:365]:     Data: 30.58.5B.05.E0.15.CC.06.38.C1.A4.08 (12)
+[17:16:48][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.16.95.FE.30.58.5B.05.E0.15.CC.06.38.C1.A4.08 (19)
+[17:16:48][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:48][VV][esp32_ble_tracker:343]:   Address: F2:00:93:6A:0B:B3 (RANDOM)
+[17:16:48][VV][esp32_ble_tracker:345]:   RSSI: -74
+[17:16:48][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:48][VV][esp32_ble_tracker:354]:   Ad Flag: 4
+[17:16:48][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.92.9E.61.B0.54.7C.F8.B4.00.D3.11.43.98.AF.A8.C9.01.F2.00.93.6A.0B.B3 (24)
+[17:16:48][VV][esp32_ble_tracker:368]: Adv data: 02.01.04.1B.FF.57.01.00.92.9E.61.B0.54.7C.F8.B4.00.D3.11.43.98.AF.A8.C9.01.F2.00.93.6A.0B.B3 (31)
+[17:16:50][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:50][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:50][VV][esp32_ble_tracker:345]:   RSSI: -58
+[17:16:50][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:50][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:50][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:50][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:52][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:52][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:52][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:16:52][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:52][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:52][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:52][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:52][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:16:52][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:16:53][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:53][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:16:53][VV][esp32_ble_tracker:345]:   RSSI: -60
+[17:16:53][VV][esp32_ble_tracker:346]:   Name: 'MJYD2S'
+[17:16:53][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:53][VV][esp32_ble_tracker:363]:   Service data:
+[17:16:53][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:16:53][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.42.02.32.CD.50.EC.50 (11)
+[17:16:53][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0E.16.95.FE.10.59.F6.07.42.02.32.CD.50.EC.50.07.09.4D.4A.59.44.32.53 (26)
+[17:16:53][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:53][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:16:53][VV][esp32_ble_tracker:345]:   RSSI: -62
+[17:16:53][VV][esp32_ble_tracker:346]:   Name: 'MJYD2S'
+[17:16:53][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:53][VV][esp32_ble_tracker:363]:   Service data:
+[17:16:53][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:16:53][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.42.02.32.CD.50.EC.50 (11)
+[17:16:53][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0E.16.95.FE.10.59.F6.07.42.02.32.CD.50.EC.50.07.09.4D.4A.59.44.32.53 (26)
+[17:16:55][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:55][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:16:55][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:16:55][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:55][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:55][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:16:55][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:16:56][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:56][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:16:56][VV][esp32_ble_tracker:345]:   RSSI: -85
+[17:16:56][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:56][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:56][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:16:56][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:16:57][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:16:58][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:16:58][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:58][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:16:58][VV][esp32_ble_tracker:345]:   RSSI: -68
+[17:16:58][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:58][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:58][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:16:58][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:16:59][VV][esp32_ble_tracker:326]: Parse Result:
+[17:16:59][VV][esp32_ble_tracker:343]:   Address: A4:C1:38:AB:DD:EB (PUBLIC)
+[17:16:59][VV][esp32_ble_tracker:345]:   RSSI: -69
+[17:16:59][VV][esp32_ble_tracker:346]:   Name: ''
+[17:16:59][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:16:59][VV][esp32_ble_tracker:363]:   Service data:
+[17:16:59][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:16:59][VV][esp32_ble_tracker:365]:     Data: 58.58.5B.05.8B.EB.DD.AB.38.C1.A4.56.89.2F.AA.94.49.00.00.4E.A8.67.37 (23)
+[17:16:59][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1A.16.95.FE.58.58.5B.05.8B.EB.DD.AB.38.C1.A4.56.89.2F.AA.94.49.00.00.4E.A8.67.37 (30)
+[17:17:00][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:17:00][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:17:00][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:00][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:00][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:17:00][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:00][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:00][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:00][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:01][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:01][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:17:01][VV][esp32_ble_tracker:345]:   RSSI: -74
+[17:17:01][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:01][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:01][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:17:01][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:17:01][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:01][VV][esp32_ble_tracker:343]:   Address: A4:C1:38:AB:DD:EB (PUBLIC)
+[17:17:01][VV][esp32_ble_tracker:345]:   RSSI: -71
+[17:17:01][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:01][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:01][VV][esp32_ble_tracker:363]:   Service data:
+[17:17:01][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:17:01][VV][esp32_ble_tracker:365]:     Data: 58.58.5B.05.8B.EB.DD.AB.38.C1.A4.56.89.2F.AA.94.49.00.00.4E.A8.67.37 (23)
+[17:17:01][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1A.16.95.FE.58.58.5B.05.8B.EB.DD.AB.38.C1.A4.56.89.2F.AA.94.49.00.00.4E.A8.67.37 (30)
+[17:17:02][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:02][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:02][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:17:02][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:02][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:02][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:02][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:03][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:17:03][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:17:05][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:05][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:05][VV][esp32_ble_tracker:345]:   RSSI: -57
+[17:17:05][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:05][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:05][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:05][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:06][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:06][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:17:06][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:17:06][VV][esp32_ble_tracker:346]:   Name: 'MJYD2S'
+[17:17:06][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:06][VV][esp32_ble_tracker:363]:   Service data:
+[17:17:06][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:17:06][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.42.02.32.CD.50.EC.50 (11)
+[17:17:06][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0E.16.95.FE.10.59.F6.07.42.02.32.CD.50.EC.50.07.09.4D.4A.59.44.32.53 (26)
+[17:17:06][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:06][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:17:06][VV][esp32_ble_tracker:345]:   RSSI: -55
+[17:17:06][VV][esp32_ble_tracker:346]:   Name: 'MJYD2S'
+[17:17:06][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:06][VV][esp32_ble_tracker:363]:   Service data:
+[17:17:06][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:17:06][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.42.02.32.CD.50.EC.50 (11)
+[17:17:06][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0E.16.95.FE.10.59.F6.07.42.02.32.CD.50.EC.50.07.09.4D.4A.59.44.32.53 (26)
+[17:17:06][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:06][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:17:06][VV][esp32_ble_tracker:345]:   RSSI: -60
+[17:17:06][VV][esp32_ble_tracker:346]:   Name: 'MJYD2S'
+[17:17:06][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:06][VV][esp32_ble_tracker:363]:   Service data:
+[17:17:06][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:17:06][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.42.02.32.CD.50.EC.50 (11)
+[17:17:06][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0E.16.95.FE.10.59.F6.07.42.02.32.CD.50.EC.50.07.09.4D.4A.59.44.32.53 (26)
+[17:17:06][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:06][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:17:06][VV][esp32_ble_tracker:345]:   RSSI: -82
+[17:17:07][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:07][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:07][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:17:07][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:17:07][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:07][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:07][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:17:07][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:07][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:07][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:07][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:08][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:17:08][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:17:09][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:09][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:09][VV][esp32_ble_tracker:345]:   RSSI: -74
+[17:17:09][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:09][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:09][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:09][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:10][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:10][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:10][VV][esp32_ble_tracker:345]:   RSSI: -64
+[17:17:10][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:10][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:10][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:10][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:11][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:11][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:11][VV][esp32_ble_tracker:345]:   RSSI: -62
+[17:17:11][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:11][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:11][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:11][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:11][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:13][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:13][VV][esp32_ble_tracker:345]:   RSSI: -62
+[17:17:13][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:13][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:13][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:13][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:13][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:17:14][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:17:14][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:14][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:17:14][VV][esp32_ble_tracker:345]:   RSSI: -74
+[17:17:14][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:14][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:14][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:17:14][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:17:14][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:14][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:17:14][VV][esp32_ble_tracker:345]:   RSSI: -60
+[17:17:14][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:14][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:14][VV][esp32_ble_tracker:363]:   Service data:
+[17:17:14][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:17:14][VV][esp32_ble_tracker:365]:     Data: 58.59.F6.07.43.02.32.CD.50.EC.50.39.6C.46.4E.9C.B1.67.00.00.54.96.0C.47 (24)
+[17:17:14][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.16.95.FE.58.59.F6.07.43.02.32.CD.50.EC.50.39.6C.46.4E.9C.B1.67.00.00.54.96.0C.47 (31)
+[17:17:15][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:17:15][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:17:15][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:15][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:17:15][VV][esp32_ble_tracker:345]:   RSSI: -62
+[17:17:15][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:15][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:15][VV][esp32_ble_tracker:363]:   Service data:
+[17:17:15][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:17:15][VV][esp32_ble_tracker:365]:     Data: 58.59.F6.07.43.02.32.CD.50.EC.50.39.6C.46.4E.9C.B1.67.00.00.54.96.0C.47 (24)
+[17:17:15][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.16.95.FE.58.59.F6.07.43.02.32.CD.50.EC.50.39.6C.46.4E.9C.B1.67.00.00.54.96.0C.47 (31)
+[17:17:16][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:16][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:17:16][VV][esp32_ble_tracker:345]:   RSSI: -60
+[17:17:16][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:16][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:16][VV][esp32_ble_tracker:363]:   Service data:
+[17:17:16][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:17:16][VV][esp32_ble_tracker:365]:     Data: 58.59.F6.07.43.02.32.CD.50.EC.50.39.6C.46.4E.9C.B1.67.00.00.54.96.0C.47 (24)
+[17:17:16][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.16.95.FE.58.59.F6.07.43.02.32.CD.50.EC.50.39.6C.46.4E.9C.B1.67.00.00.54.96.0C.47 (31)
+[17:17:16][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:16][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:16][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:17:16][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:16][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:16][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:16][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:17][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:17][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:17:17][VV][esp32_ble_tracker:345]:   RSSI: -79
+[17:17:17][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:17][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:17][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:17:17][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:17:18][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:18][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:18][VV][esp32_ble_tracker:345]:   RSSI: -62
+[17:17:18][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:18][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:18][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:18][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:19][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:17:19][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:17:19][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:20][VV][esp32_ble_tracker:343]:   Address: DF:90:15:2F:A9:60 (PUBLIC)
+[17:17:20][VV][esp32_ble_tracker:345]:   RSSI: -75
+[17:17:20][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:20][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:20][VV][esp32_ble_tracker:360]:   Manufacturer data: 02.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.01.DF.90.15.2F.A9.60 (24)
+[17:17:20][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.FF.57.01.02.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.01.DF.90.15.2F.A9.60 (31)
+[17:17:20][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:20][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:20][VV][esp32_ble_tracker:345]:   RSSI: -57
+[17:17:20][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:20][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:20][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:20][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:20][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:20][VV][esp32_ble_tracker:343]:   Address: DF:90:15:2F:A9:60 (PUBLIC)
+[17:17:20][VV][esp32_ble_tracker:345]:   RSSI: -76
+[17:17:20][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:20][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:20][VV][esp32_ble_tracker:360]:   Manufacturer data: 02.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.01.DF.90.15.2F.A9.60 (24)
+[17:17:21][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.FF.57.01.02.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.01.DF.90.15.2F.A9.60 (31)
+[17:17:21][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:21][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:21][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:17:21][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:21][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:21][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:21][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:21][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:21][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:17:21][VV][esp32_ble_tracker:345]:   RSSI: -67
+[17:17:21][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:21][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:21][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:17:21][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:17:21][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:21][VV][esp32_ble_tracker:343]:   Address: DF:90:15:2F:A9:60 (PUBLIC)
+[17:17:21][VV][esp32_ble_tracker:345]:   RSSI: -75
+[17:17:21][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:21][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:21][VV][esp32_ble_tracker:360]:   Manufacturer data: 02.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.01.DF.90.15.2F.A9.60 (24)
+[17:17:22][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.FF.57.01.02.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.01.DF.90.15.2F.A9.60 (31)
+[17:17:23][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:23][VV][esp32_ble_tracker:343]:   Address: DF:90:15:2F:A9:60 (PUBLIC)
+[17:17:23][VV][esp32_ble_tracker:345]:   RSSI: -78
+[17:17:23][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:23][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:23][VV][esp32_ble_tracker:360]:   Manufacturer data: 02.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.01.DF.90.15.2F.A9.60 (24)
+[17:17:23][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.FF.57.01.02.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.01.DF.90.15.2F.A9.60 (31)
+[17:17:24][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:24][VV][esp32_ble_tracker:343]:   Address: DF:90:15:2F:A9:60 (PUBLIC)
+[17:17:24][VV][esp32_ble_tracker:345]:   RSSI: -78
+[17:17:24][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:24][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:24][VV][esp32_ble_tracker:360]:   Manufacturer data: 02.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.01.DF.90.15.2F.A9.60 (24)
+[17:17:24][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.FF.57.01.02.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.FF.01.DF.90.15.2F.A9.60 (31)
+[17:17:24][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:17:24][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:17:26][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:26][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:26][VV][esp32_ble_tracker:345]:   RSSI: -64
+[17:17:26][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:26][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:26][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:26][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:26][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:26][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:17:26][VV][esp32_ble_tracker:345]:   RSSI: -71
+[17:17:26][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:26][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:26][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:17:26][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:17:27][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:27][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:17:27][VV][esp32_ble_tracker:345]:   RSSI: -61
+[17:17:27][VV][esp32_ble_tracker:346]:   Name: 'MJYD2S'
+[17:17:27][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:27][VV][esp32_ble_tracker:363]:   Service data:
+[17:17:27][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:17:27][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.46.02.32.CD.50.EC.50 (11)
+[17:17:27][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0E.16.95.FE.10.59.F6.07.46.02.32.CD.50.EC.50.07.09.4D.4A.59.44.32.53 (26)
+[17:17:27][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:27][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:17:27][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:17:27][VV][esp32_ble_tracker:346]:   Name: 'MJYD2S'
+[17:17:27][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:27][VV][esp32_ble_tracker:363]:   Service data:
+[17:17:27][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:17:27][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.46.02.32.CD.50.EC.50 (11)
+[17:17:27][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0E.16.95.FE.10.59.F6.07.46.02.32.CD.50.EC.50.07.09.4D.4A.59.44.32.53 (26)
+[17:17:28][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:28][VV][esp32_ble_tracker:343]:   Address: F2:00:93:6A:0B:B3 (RANDOM)
+[17:17:28][VV][esp32_ble_tracker:345]:   RSSI: -73
+[17:17:28][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:28][VV][esp32_ble_tracker:354]:   Ad Flag: 4
+[17:17:28][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.C3.08.AD.D5.F1.B9.17.1D.CD.2D.5D.9B.19.85.2B.43.01.F2.00.93.6A.0B.B3 (24)
+[17:17:29][VV][esp32_ble_tracker:368]: Adv data: 02.01.04.1B.FF.57.01.00.C3.08.AD.D5.F1.B9.17.1D.CD.2D.5D.9B.19.85.2B.43.01.F2.00.93.6A.0B.B3 (31)
+[17:17:30][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:17:30][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:17:30][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:17:30][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:17:31][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:31][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:31][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:17:31][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:31][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:31][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:31][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:31][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:31][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:17:31][VV][esp32_ble_tracker:345]:   RSSI: -71
+[17:17:31][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:31][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:31][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:17:31][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:17:32][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:32][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:32][VV][esp32_ble_tracker:345]:   RSSI: -61
+[17:17:32][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:32][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:32][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:32][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:35][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:35][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:35][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:17:35][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:35][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:35][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:35][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:35][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:17:35][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:17:36][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:36][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:CD:32:02 (PUBLIC)
+[17:17:36][VV][esp32_ble_tracker:345]:   RSSI: -58
+[17:17:36][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:36][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:36][VV][esp32_ble_tracker:363]:   Service data:
+[17:17:36][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:17:36][VV][esp32_ble_tracker:365]:     Data: 48.59.F6.07.47.2C.53.C7.6B.5F.2D.32.67.00.00.73.76.C9.58 (19)
+[17:17:36][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.16.16.95.FE.48.59.F6.07.47.2C.53.C7.6B.5F.2D.32.67.00.00.73.76.C9.58 (26)
+[17:17:36][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:36][VV][esp32_ble_tracker:343]:   Address: A4:C1:38:06:CC:15 (PUBLIC)
+[17:17:36][VV][esp32_ble_tracker:345]:   RSSI: -65
+[17:17:36][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:36][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:36][VV][esp32_ble_tracker:363]:   Service data:
+[17:17:36][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:17:36][VV][esp32_ble_tracker:365]:     Data: 30.58.5B.05.E0.15.CC.06.38.C1.A4.08 (12)
+[17:17:36][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.16.95.FE.30.58.5B.05.E0.15.CC.06.38.C1.A4.08 (19)
+[17:17:37][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:37][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:17:37][VV][esp32_ble_tracker:345]:   RSSI: -83
+[17:17:37][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:37][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:37][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.8A.EA.92.B5.14.B3.8A.44.9C.45.89.4B.E2.24.B6.8F.01.88.0F.10.2C.FD.59 (24)
+[17:17:37][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.FF.57.01.00.8A.EA.92.B5.14.B3.8A.44.9C.45.89.4B.E2.24.B6.8F.01.88.0F.10.2C.FD.59 (31)
+[17:17:38][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:38][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:17:38][VV][esp32_ble_tracker:345]:   RSSI: -85
+[17:17:38][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:38][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:38][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.8A.EA.92.B5.14.B3.8A.44.9C.45.89.4B.E2.24.B6.8F.01.88.0F.10.2C.FD.59 (24)
+[17:17:38][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.FF.57.01.00.8A.EA.92.B5.14.B3.8A.44.9C.45.89.4B.E2.24.B6.8F.01.88.0F.10.2C.FD.59 (31)
+[17:17:40][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:40][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:17:40][VV][esp32_ble_tracker:345]:   RSSI: -73
+[17:17:40][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:40][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:40][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:17:40][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:17:40][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:40][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:17:40][VV][esp32_ble_tracker:345]:   RSSI: -88
+[17:17:40][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:40][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:40][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.8A.EA.92.B5.14.B3.8A.44.9C.45.89.4B.E2.24.B6.8F.01.88.0F.10.2C.FD.59 (24)
+[17:17:40][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1B.FF.57.01.00.8A.EA.92.B5.14.B3.8A.44.9C.45.89.4B.E2.24.B6.8F.01.88.0F.10.2C.FD.59 (31)
+[17:17:40][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:17:40][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:17:40][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:40][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:40][VV][esp32_ble_tracker:345]:   RSSI: -62
+[17:17:40][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:40][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:40][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:40][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:43][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:44][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:44][VV][esp32_ble_tracker:345]:   RSSI: -55
+[17:17:44][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:44][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:44][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:44][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:45][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:17:45][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:17:45][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:17:45][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:17:45][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:45][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:45][VV][esp32_ble_tracker:345]:   RSSI: -62
+[17:17:45][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:45][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:45][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:45][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:47][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:47][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:17:47][VV][esp32_ble_tracker:345]:   RSSI: -74
+[17:17:47][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:47][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:47][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:17:47][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:17:50][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:50][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:50][VV][esp32_ble_tracker:345]:   RSSI: -62
+[17:17:50][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:50][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:50][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:50][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:50][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:17:50][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:17:51][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:52][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:52][VV][esp32_ble_tracker:345]:   RSSI: -62
+[17:17:52][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:52][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:52][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:52][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:52][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:52][VV][esp32_ble_tracker:343]:   Address: A4:C1:38:06:CC:15 (PUBLIC)
+[17:17:52][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:17:52][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:52][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:52][VV][esp32_ble_tracker:363]:   Service data:
+[17:17:52][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:17:52][VV][esp32_ble_tracker:365]:     Data: 30.58.5B.05.E0.15.CC.06.38.C1.A4.08 (12)
+[17:17:52][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.16.95.FE.30.58.5B.05.E0.15.CC.06.38.C1.A4.08 (19)
+[17:17:54][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:54][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:54][VV][esp32_ble_tracker:345]:   RSSI: -64
+[17:17:54][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:54][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:54][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:54][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:54][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:54][VV][esp32_ble_tracker:343]:   Address: F2:00:93:6A:0B:B3 (RANDOM)
+[17:17:54][VV][esp32_ble_tracker:345]:   RSSI: -73
+[17:17:54][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:54][VV][esp32_ble_tracker:354]:   Ad Flag: 4
+[17:17:54][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.C3.08.AD.D5.F1.B9.17.1D.CD.2D.5D.9B.19.85.2B.43.01.F2.00.93.6A.0B.B3 (24)
+[17:17:54][VV][esp32_ble_tracker:368]: Adv data: 02.01.04.1B.FF.57.01.00.C3.08.AD.D5.F1.B9.17.1D.CD.2D.5D.9B.19.85.2B.43.01.F2.00.93.6A.0B.B3 (31)
+[17:17:54][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:54][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:54][VV][esp32_ble_tracker:345]:   RSSI: -56
+[17:17:54][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:54][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:54][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:54][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:55][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:55][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:55][VV][esp32_ble_tracker:345]:   RSSI: -67
+[17:17:55][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:55][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:55][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:55][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:55][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:17:55][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:17:55][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:55][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:17:55][VV][esp32_ble_tracker:345]:   RSSI: -69
+[17:17:55][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:55][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:55][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:17:55][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:17:56][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:56][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:17:56][VV][esp32_ble_tracker:345]:   RSSI: -64
+[17:17:56][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:56][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:56][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:17:56][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:17:59][VV][esp32_ble_tracker:326]: Parse Result:
+[17:17:59][VV][esp32_ble_tracker:343]:   Address: A4:C1:38:AB:DD:EB (PUBLIC)
+[17:17:59][VV][esp32_ble_tracker:345]:   RSSI: -68
+[17:17:59][VV][esp32_ble_tracker:346]:   Name: ''
+[17:17:59][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:17:59][VV][esp32_ble_tracker:363]:   Service data:
+[17:17:59][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:17:59][VV][esp32_ble_tracker:365]:     Data: 58.58.5B.05.8D.EB.DD.AB.38.C1.A4.27.B6.89.D5.71.49.00.00.98.16.BE.EC (23)
+[17:17:59][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.1A.16.95.FE.58.58.5B.05.8D.EB.DD.AB.38.C1.A4.27.B6.89.D5.71.49.00.00.98.16.BE.EC (30)
+[17:17:59][VV][esp32_ble_tracker:326]: Parse Result:
+[17:18:00][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:18:00][VV][esp32_ble_tracker:345]:   RSSI: -71
+[17:18:00][VV][esp32_ble_tracker:346]:   Name: ''
+[17:18:00][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:18:00][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:18:00][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:18:00][VV][esp32_ble_tracker:326]: Parse Result:
+[17:18:00][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:18:00][VV][esp32_ble_tracker:345]:   RSSI: -63
+[17:18:00][VV][esp32_ble_tracker:346]:   Name: ''
+[17:18:00][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:18:00][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:18:00][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:18:00][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:18:00][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:18:00][VV][esp32_ble_tracker:326]: Parse Result:
+[17:18:00][VV][esp32_ble_tracker:343]:   Address: 88:0F:10:2C:FD:59 (PUBLIC)
+[17:18:00][VV][esp32_ble_tracker:345]:   RSSI: -84
+[17:18:00][VV][esp32_ble_tracker:346]:   Name: ''
+[17:18:00][VV][esp32_ble_tracker:354]:   Ad Flag: 5
+[17:18:00][VV][esp32_ble_tracker:360]:   Manufacturer data: 00.8A.EA.92.B5.14.B3.8A.44.9C.45.89.4B.E2.24.B6.8F.01.88.0F.10.2C.FD.59 (24)
+[17:18:00][VV][esp32_ble_tracker:368]: Adv data: 02.01.05.1B.FF.57.01.00.8A.EA.92.B5.14.B3.8A.44.9C.45.89.4B.E2.24.B6.8F.01.88.0F.10.2C.FD.59 (31)
+[17:18:00][VV][api.service:220]: on_ping_request: PingRequest {}
+[17:18:00][VV][api.service:032]: send_ping_response: PingResponse {}
+[17:18:00][VV][esp32_ble_tracker:326]: Parse Result:
+[17:18:01][VV][esp32_ble_tracker:343]:   Address: 50:EC:50:7C:1D:23 (PUBLIC)
+[17:18:01][VV][esp32_ble_tracker:345]:   RSSI: -70
+[17:18:01][VV][esp32_ble_tracker:346]:   Name: ''
+[17:18:01][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:18:01][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (12)
+[17:18:01][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.3C.04.00.21.1D.7C.50.EC.50.81 (19)
+[17:18:02][VV][esp32_ble_tracker:326]: Parse Result:
+[17:18:02][VV][esp32_ble_tracker:343]:   Address: A4:C1:38:06:CC:15 (PUBLIC)
+[17:18:02][VV][esp32_ble_tracker:345]:   RSSI: -75
+[17:18:02][VV][esp32_ble_tracker:346]:   Name: ''
+[17:18:02][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:18:02][VV][esp32_ble_tracker:363]:   Service data:
+[17:18:02][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:18:02][VV][esp32_ble_tracker:365]:     Data: 30.58.5B.05.E0.15.CC.06.38.C1.A4.08 (12)
+[17:18:02][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.16.95.FE.30.58.5B.05.E0.15.CC.06.38.C1.A4.08 (19)
+[17:18:03][VV][esp32_ble_tracker:326]: Parse Result:
+[17:18:03][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:18:03][VV][esp32_ble_tracker:345]:   RSSI: -56
+[17:18:03][VV][esp32_ble_tracker:346]:   Name: ''
+[17:18:03][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:18:03][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:18:03][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:18:03][VV][esp32_ble_tracker:326]: Parse Result:
+[17:18:03][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:18:03][VV][esp32_ble_tracker:345]:   RSSI: -65
+[17:18:03][VV][esp32_ble_tracker:346]:   Name: ''
+[17:18:03][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:18:03][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:18:03][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:18:04][VV][esp32_ble_tracker:326]: Parse Result:
+[17:18:04][VV][esp32_ble_tracker:343]:   Address: A4:C1:38:AB:DD:EB (PUBLIC)
+[17:18:04][VV][esp32_ble_tracker:345]:   RSSI: -64
+[17:18:04][VV][esp32_ble_tracker:346]:   Name: ''
+[17:18:04][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:18:04][VV][esp32_ble_tracker:363]:   Service data:
+[17:18:04][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:18:04][VV][esp32_ble_tracker:365]:     Data: 30.58.5B.05.8E.EB.DD.AB.38.C1.A4.08 (12)
+[17:18:04][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.16.95.FE.30.58.5B.05.8E.EB.DD.AB.38.C1.A4.08 (19)
+[17:18:04][VV][esp32_ble_tracker:326]: Parse Result:
+[17:18:04][VV][esp32_ble_tracker:343]:   Address: A4:C1:38:06:CC:15 (PUBLIC)
+[17:18:04][VV][esp32_ble_tracker:345]:   RSSI: -51
+[17:18:04][VV][esp32_ble_tracker:346]:   Name: ''
+[17:18:04][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:18:04][VV][esp32_ble_tracker:363]:   Service data:
+[17:18:04][VV][esp32_ble_tracker:364]:     UUID: FE:95
+[17:18:04][VV][esp32_ble_tracker:365]:     Data: 30.58.5B.05.E0.15.CC.06.38.C1.A4.08 (12)
+[17:18:04][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.16.95.FE.30.58.5B.05.E0.15.CC.06.38.C1.A4.08 (19)
+[17:18:04][VV][esp32_ble_tracker:326]: Parse Result:
+[17:18:04][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:18:04][VV][esp32_ble_tracker:345]:   RSSI: -66
+[17:18:04][VV][esp32_ble_tracker:346]:   Name: ''
+[17:18:04][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:18:04][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:18:04][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)
+[17:18:04][VV][esp32_ble_tracker:326]: Parse Result:
+[17:18:04][VV][esp32_ble_tracker:343]:   Address: 34:CE:00:8D:F4:94 (PUBLIC)
+[17:18:04][VV][esp32_ble_tracker:345]:   RSSI: -65
+[17:18:04][VV][esp32_ble_tracker:346]:   Name: ''
+[17:18:04][VV][esp32_ble_tracker:354]:   Ad Flag: 6
+[17:18:04][VV][esp32_ble_tracker:360]:   Manufacturer data: 0A.10.58.01.00.93.F4.8D.00.CE.34.81 (12)
+[17:18:04][VV][esp32_ble_tracker:368]: Adv data: 02.01.06.0F.FF.8F.03.0A.10.58.01.00.93.F4.8D.00.CE.34.81 (19)

@@ -1,0 +1,78 @@
+Add support for Xiaomi-Yeelight BLE nightlight (MJYD2S) #732 
+
+MAC is 50:EC:50:CD:32:02
+
+In-dark events:
+[05:01:36][VV][esp32_ble_tracker:365]:     Data: 58.59.F6.07.1D.02.32.CD.50.EC.50.9F.8C.98.5B.5C.04.4E.00.00.FB.B7.16.94 (24)
+[05:01:38][VV][esp32_ble_tracker:365]:     Data: 48.59.F6.07.1E.96.AC.4E.ED.FA.2F.2E.4E.00.00.7F.63.4B.2F (19)
+[05:01:44][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.1F.02.32.CD.50.EC.50 (11)
+[05:02:31][VV][esp32_ble_tracker:365]:     Data: 58.59.F6.07.20.02.32.CD.50.EC.50.6C.D8.CE.B0.5F.86.4E.00.00.F0.0E.7C.8E (24)
+[05:02:35][VV][esp32_ble_tracker:365]:     Data: 58.59.F6.07.21.02.32.CD.50.EC.50.03.CA.7D.76.4E.00.00.EE.0B.B4.04 (22)
+[05:02:37][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.22.02.32.CD.50.EC.50 (11)
+[05:03:38][VV][esp32_ble_tracker:365]:     Data: 48.59.F6.07.23.6F.54.F0.CD.70.AF.F6.4E.00.00.24.8C.25.C0 (19)
+
+In-bright events:
+[05:05:30][VV][esp32_ble_tracker:365]:     Data: 58.59.F6.07.25.02.32.CD.50.EC.50.E9.23.FE.99.4B.23.4E.00.00.B8.6B.97.E8 (24)
+[05:05:33][VV][esp32_ble_tracker:365]:     Data: 48.59.F6.07.26.03.1D.33.C5.8F.01.FC.4E.00.00.AD.5B.46.F7 (19)
+[05:05:34][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.27.02.32.CD.50.EC.50 (11)
+[05:07:31][VV][esp32_ble_tracker:365]:     Data: 58.59.F6.07.28.02.32.CD.50.EC.50.3D.24.E3.0E.D2.11.4E.00.00.68.A1.3A.DF (24)
+
+In-dark events with keep moving within 1 min:
+[05:09:12][VV][esp32_ble_tracker:365]:     Data: 58.59.F6.07.2D.02.32.CD.50.EC.50.23.31.0D.03.DB.EF.4E.00.00.5F.F5.09.BB (24)
+[05:09:16][VV][esp32_ble_tracker:365]:     Data: 48.59.F6.07.2E.7F.28.2B.9A.33.F3.D4.4E.00.00.C0.7E.BB.51 (19)
+[05:09:22][VV][esp32_ble_tracker:365]:     Data: 10.59.F6.07.2F.02.32.CD.50.EC.50 (11)
+[05:12:18][VV][esp32_ble_tracker:365]:     Data: 48.59.F6.07.30.1D.12.24.A7.A9.92.D4.4E.00.00.FB.AE.D9.28 (19)
+[05:12:32][VV][esp32_ble_tracker:365]:     Data: 58.59.F6.07.32.02.32.CD.50.EC.50.BC.95.BF.F2.C2.C1.4E.00.00.BC.AF.50.C0 (24)
+
+* Active scan
+[04:27:19][D][xiaomi_ble:269]: decrypt_xiaomi_payload(): authenticated decryption passed.
+[04:27:19][D][xiaomi_ble:272]:   MAC address : 50.EC.50.CD.32.02 (6), Plaintext : 07.10.03.01.00.00 (6), Packet : 163
+[04:27:19][D][xiaomi_ble:284]: Got Xiaomi MJYD2S (50:EC:50:CD:32:02):
+[04:27:19][D][xiaomi_ble:299]:   Illuminance: 1lx
+[04:27:20][D][esp32_ble_tracker:544]: Found device 50:EC:50:CD:32:02 RSSI=-66
+[04:27:20][D][esp32_ble_tracker:565]:   Address Type: PUBLIC
+[04:27:25][D][xiaomi_ble:269]: decrypt_xiaomi_payload(): authenticated decryption passed.
+[04:27:25][D][xiaomi_ble:272]:   MAC address : 50.EC.50.CD.32.02 (6), Plaintext : 0A.10.01.64 (4), Packet : 165
+[04:27:25][D][xiaomi_ble:284]: Got Xiaomi MJYD2S (50:EC:50:CD:32:02):
+[04:27:25][D][xiaomi_ble:293]:   Battery Level: 100%
+[04:27:25][D][sensor:092]: 'nlight_batt_bath': Sending state 100.00000 % with 0 decimals of accuracy
+
+* Day motion
+[04:28:01][D][xiaomi_ble:269]: decrypt_xiaomi_payload(): authenticated decryption passed.
+[04:28:01][D][xiaomi_ble:272]:   MAC address : 50.EC.50.CD.32.02 (6), Plaintext : 0F.00.03.64.00.00 (6), Packet : 167
+[04:28:04][D][xiaomi_ble:193]: decrypt_xiaomi_payload(): data packet has wrong size (19)!
+[04:28:04][D][xiaomi_ble:194]:   Packet : 48.59.F6.07.A8.F0.48.49.E0.74.E2.FC.63.00.00.76.0E.30.5D (19)
+
+* No motion within 2 min
+[04:30:06][D][xiaomi_ble:193]: decrypt_xiaomi_payload(): data packet has wrong size (19)!
+[04:30:06][D][xiaomi_ble:194]:   Packet : 48.59.F6.07.AA.69.B2.DA.B5.69.1F.25.63.00.00.78.32.EE.58 (19)
+
+* Day motion
+[04:33:01][D][xiaomi_ble:269]: decrypt_xiaomi_payload(): authenticated decryption passed.
+[04:33:01][D][xiaomi_ble:272]:   MAC address : 50.EC.50.CD.32.02 (6), Plaintext : 0F.00.03.64.00.00 (6), Packet : 176
+[04:33:04][D][xiaomi_ble:193]: decrypt_xiaomi_payload(): data packet has wrong size (19)!
+[04:33:04][D][xiaomi_ble:194]:   Packet : 48.59.F6.07.B1.DD.07.89.39.E7.4F.E9.63.00.00.41.A9.29.16 (19)
+
+* No motion within 2 min
+[04:35:05][D][xiaomi_ble:193]: decrypt_xiaomi_payload(): data packet has wrong size (19)!
+[04:35:05][D][xiaomi_ble:194]:   Packet : 48.59.F6.07.B3.2A.DE.B0.35.CE.B3.FB.63.00.00.02.69.E6.95 (19)
+
+* Night motion
+[04:38:01][D][xiaomi_ble:269]: decrypt_xiaomi_payload(): authenticated decryption passed.
+[04:38:01][D][xiaomi_ble:272]:   MAC address : 50.EC.50.CD.32.02 (6), Plaintext : 0F.00.03.01.00.00 (6), Packet : 185
+[04:38:04][D][xiaomi_ble:193]: decrypt_xiaomi_payload(): data packet has wrong size (19)!
+[04:38:05][D][xiaomi_ble:194]:   Packet : 48.59.F6.07.BA.C7.B4.51.66.E9.04.19.63.00.00.97.CB.95.EC (19)
+
+* No motion within 2 min
+[04:40:06][D][xiaomi_ble:193]: decrypt_xiaomi_payload(): data packet has wrong size (19)!
+[04:40:06][D][xiaomi_ble:194]:   Packet : 48.59.F6.07.BC.05.48.CA.DD.C1.86.60.63.00.00.5D.82.43.A5 (19)
+
+* Night motion
+[04:42:35][D][xiaomi_ble:269]: decrypt_xiaomi_payload(): authenticated decryption passed.
+[04:42:35][D][xiaomi_ble:272]:   MAC address : 50.EC.50.CD.32.02 (6), Plaintext : 0F.00.03.01.00.00 (6), Packet : 194
+[04:42:38][D][xiaomi_ble:193]: decrypt_xiaomi_payload(): data packet has wrong size (19)!
+[04:42:38][D][xiaomi_ble:194]:   Packet : 48.59.F6.07.C3.FE.95.66.C9.00.A4.6C.63.00.00.75.15.BA.B0 (19)
+
+* No motion within 2 min
+[04:44:39][D][xiaomi_ble:193]: decrypt_xiaomi_payload(): data packet has wrong size (19)!
+[04:44:39][D][xiaomi_ble:194]:   Packet : 48.59.F6.07.C5.0D.CE.8C.C8.39.E8.FC.63.00.00.9B.03.D8.DE (19)

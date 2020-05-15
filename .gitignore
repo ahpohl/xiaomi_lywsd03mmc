@@ -2,3 +2,4 @@ build/
 msg.bin
 mbedtls
 cryptopp
+decrypt
