@@ -6,7 +6,7 @@ The ecryption keys have been obtained using the original [Xiaomi Home](https://p
 ```
 $ adb root
 $ adb shell
-# remount -o remount,rw /system
+# mount -o remount,rw /system
 # mv /data/misc/user/0/cacerts-added/0595058e.0 /system/etc/security/cacerts/
 # chown root.root /system/etc/security/cacerts/*
 
