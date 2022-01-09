@@ -36,3 +36,4 @@ This repository serves as the basis for supporting the device in ESPHome. Develo
  - ESPHome xiaomi_lywsd03mmc [support thread](https://github.com/esphome/feature-requests/issues/552)
  - [Crypto++](https://www.cryptopp.com/) library expample AES-CCM with AE
  - Remote PCAP [tutorial](https://egorovandreyrm.com/pcap-remote-tutorial/)
+ - Charles proxy [tutorial](https://www.raywenderlich.com/21931256-charles-proxy-tutorial-for-ios) for iOS
